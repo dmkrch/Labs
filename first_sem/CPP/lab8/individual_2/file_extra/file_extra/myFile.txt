@@ -1,0 +1,25 @@
+
+Name: Hat
+Address: Boldina
+Date: 25/10
+Hash: 1
+
+Name: Umbrella
+Address: Gorky
+Date: 21/10
+Hash: 2
+
+Name: Coat
+Address: Kolasa
+Date: 21/11
+Hash: 1
+
+Name: GLoves
+Address: Boldina
+Date: 21/11
+Hash: 1
+
+Name: Hat
+Address: Boldina st.
+Date: 21/10
+Hash: 1

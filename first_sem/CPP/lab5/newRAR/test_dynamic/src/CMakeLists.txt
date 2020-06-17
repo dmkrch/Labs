@@ -1,0 +1,2 @@
+add_subdirectory(dynamic_lib_project_name)
+add_subdirectory(main_project_name)

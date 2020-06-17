@@ -1,0 +1,6 @@
+C:/Users/A S U S/Desktop/newRAR/test_dynamic/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/A S U S/Desktop/newRAR/test_dynamic/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/A S U S/Desktop/newRAR/test_dynamic/build/src/dynamic_lib_project_name/CMakeFiles/dynamic_lib_project_name.dir
+C:/Users/A S U S/Desktop/newRAR/test_dynamic/build/src/dynamic_lib_project_name/CMakeFiles/ALL_BUILD.dir
+C:/Users/A S U S/Desktop/newRAR/test_dynamic/build/src/main_project_name/CMakeFiles/main_project_name.dir
+C:/Users/A S U S/Desktop/newRAR/test_dynamic/build/src/main_project_name/CMakeFiles/ALL_BUILD.dir

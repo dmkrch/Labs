@@ -1,0 +1,58 @@
+#ifndef OrderH
+#define OrderH
+
+#endif
+
+#pragma once
+#include <vcl.h>
+
+
+class Order
+{
+	public:
+		Order(String name, String address, String date, int id)
+		{
+			_name = name;
+			_address = address;
+			_date = date;
+			_id = id;
+		}
+
+		Order()
+		{
+
+        }
+
+
+		String Get_name()
+		{
+			return _name;
+		}
+
+		String Get_address()
+		{
+			return _address;
+		}
+
+		String Get_date()
+		{
+			return _date;
+		}
+
+		void Set_id(int id)
+		{
+			_id = id;
+		}
+
+		int Get_id()
+		{
+			return _id;
+		}
+
+
+	private:
+		int _id;
+		String _name;
+		String _address;
+		String _date;
+};
