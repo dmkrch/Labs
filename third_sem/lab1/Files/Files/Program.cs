@@ -15,9 +15,10 @@ namespace Files
             Console.WriteLine("4 - Move file");
             Console.WriteLine("5 - Record to file");
             Console.WriteLine("6 - Read from file");
+            Console.WriteLine("7 - Exit");
         }
 
-        public static void PathInput(string path)
+        public static void InputPath(ref string path)
         {
             Regex pathPattern = new Regex(@"[C\|D]:\\(\w+\\?)*");
 
@@ -40,7 +41,7 @@ namespace Files
 
 
         static void Main(string[] args)
-        { 
+        {
             while (true)
             {
                 PrintMenu();
@@ -62,14 +63,19 @@ namespace Files
                     }
                     break;
                 }
-                
+
+                string path = null;
+
                 switch(index)
                 {
                     case 1:
+
                         break;
                     case 2:
                         break;
                     case 3:
+                        InputPath(ref path);
+                        FileOperations.GetFileInformation(path);
                         break;
                     case 4:
                         break;
@@ -78,6 +84,7 @@ namespace Files
                     case 6:
                         break;
                     case 7:
+                        Environment.Exit(0);
                         break;
 
                     default:
