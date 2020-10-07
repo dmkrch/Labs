@@ -2,16 +2,12 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace Files
 {
     static class FileOperations
-    {
-        public static void PrintHello()
-        {
-            Console.WriteLine("Hello, world\n");
-        }
-
+    { 
         public static void GetFileInformation(string path)
         {
             FileInfo fileInf = new FileInfo(path);
@@ -30,7 +26,38 @@ namespace Files
 
         public static void CreateFile(string path, string name)
         {
-            //File file = new File(path);
+            DirectoryInfo dirInfo = new DirectoryInfo(path);
+            if (dirInfo.Exists)
+            {
+                path += name;
+                File.Create(path);
+            }
+            else
+            {
+                Console.WriteLine("No such directory");
+                return;
+            }
+        }
+
+        public static void DeleteFile(string path)
+        {
+            if (File.Exists(path))
+            {
+                File.Delete(path);
+                Console.WriteLine("Deleted!");
+            }
+            else
+            {
+                Console.WriteLine("No such file");
+            }
+        }
+
+        public static void MoveFile(string pathFrom, string pathTo)
+        {
+            if(File.Exists(pathFrom))
+            {
+                File.Move(pathFrom, pathTo);
+            }
         }
     }
 }
