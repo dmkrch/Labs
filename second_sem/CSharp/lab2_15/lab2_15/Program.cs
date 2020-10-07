@@ -14,7 +14,7 @@ namespace lab2_15
             Console.WriteLine("line: ");
             line = Console.ReadLine();
 
-            StringBuilder lineEdited = new StringBuilder();
+            StringBuilder lineEdited;// = new StringBuilder();
 
 
             for (int i = 0; i < line.Length; ++i)

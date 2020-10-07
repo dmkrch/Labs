@@ -8,7 +8,10 @@ namespace lab3_3
         {
             Furniture shelf = new Furniture(25, "shelf", true);
 
+           
+            Wardrobe ward = new Wardrobe();
 
+            ward.GetCapacity();
         }
     }
 }
