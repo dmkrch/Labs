@@ -13,9 +13,15 @@ namespace Files
             // if operation was successful
             Success,
             SuccessPrint,
+            
+            // if operation was failed
+            Error,
+            ErrorPrint,
 
             // codes for files
             FileNotExist,
+            FileIsBeingUsed,
+            MoveError,
 
             //codes for directories
             DirectoryNotExist,
@@ -43,11 +49,10 @@ namespace Files
 
         public static StatusCode CreateFile(string path, string name)
         {
-            DirectoryInfo dirInfo = new DirectoryInfo(path);
-            if (dirInfo.Exists)
+            if (Directory.Exists(path))
             {
                 path += name;
-                File.Create(path);
+                File.Create(path).Dispose();
 
                 return StatusCode.SuccessPrint;
             }
@@ -82,6 +87,7 @@ namespace Files
                     {
                         pathTo += name;
                         File.Move(pathFrom, pathTo);
+                    
                         return StatusCode.SuccessPrint;
                     }
                     else
@@ -98,6 +104,42 @@ namespace Files
             {
                 return StatusCode.DirectorySourceNotExist;
             }                
+        }
+
+        public static StatusCode AppendFile(string path, string data)
+        {
+            if (File.Exists(path))
+            {
+                using (FileStream fstream = new FileStream(path, FileMode.Append))
+                {
+                    byte[] array = System.Text.Encoding.Default.GetBytes(data);
+                    fstream.Write(array);
+
+                    return StatusCode.SuccessPrint;
+                }
+            }
+            else
+            {
+                return StatusCode.FileNotExist;
+            }
+        }
+
+        public static StatusCode ReadFromFile(string path, ref string data)
+        {
+            if (File.Exists(path))
+            {
+                using (FileStream fstream = new FileStream(path, FileMode.Append))
+                {
+                    byte[] array = System.Text.Encoding.Default.GetBytes(data);
+                    //fstream.Read();
+
+                    return StatusCode.SuccessPrint;
+                }
+            }
+            else
+            {
+                return StatusCode.FileNotExist;
+            }
         }
     }
 }

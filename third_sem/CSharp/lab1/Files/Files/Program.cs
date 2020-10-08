@@ -89,6 +89,10 @@ namespace Files
                 case FileOperations.StatusCode.DirectoryDestinationNotExist:
                     Console.WriteLine("Destination directory doesnt exist");
                     break;
+
+                case FileOperations.StatusCode.MoveError:
+                    Console.WriteLine("Failed to move file");
+                    break;
             }
         }
 
@@ -122,6 +126,7 @@ namespace Files
                 string pathTo = null;
                 string pathFrom = null;
                 string name = null;
+                string data = null;
                 FileOperations.StatusCode statusCode;
 
                 switch (index)
@@ -157,7 +162,7 @@ namespace Files
 
 
                     case 4:
-                        Console.Write("Enter name of file ");
+                        Console.Write("Enter name of file: ");
                         name = Console.ReadLine();
 
                         Console.WriteLine(@"Enter path to directory of file. Example:  D:\asdfj\asd\");
@@ -172,10 +177,23 @@ namespace Files
 
 
                     case 5:
+                        Console.WriteLine("Enter data you want to record: ");
+                        data = Console.ReadLine();
+
+                        Console.WriteLine(@"Enter path of file. Example:  D:\asdfj\asd");
+                        InputFilePath(ref path);
+
+                        statusCode = FileOperations.AppendFile(path, data);
+                        PrintStatusCodeMessage(statusCode);
                         break;
 
 
                     case 6:
+                        Console.WriteLine(@"Enter path of file. Example:  D:\asdfj\asd");
+                        InputFilePath(ref path);
+
+                        statusCode = FileOperations.ReadFromFile(path, ref data);
+                        PrintStatusCodeMessage(statusCode);
                         break;
 
 
