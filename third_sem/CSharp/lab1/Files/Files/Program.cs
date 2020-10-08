@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using System.IO;
 using System.Reflection.Metadata.Ecma335;
 using System.Text.RegularExpressions;
 
@@ -13,8 +14,6 @@ namespace Files
 
             while (true)
             {
-                Console.WriteLine(@"Enter path of file. Example:  D:\asdfj\asd");
-
                 path = Console.ReadLine();
 
                 if (pathPattern.IsMatch(path))
@@ -30,13 +29,20 @@ namespace Files
 
         public static void InputDirectoryPath(ref string path)
         {
-            Regex pathPattern = new Regex(@"D:\\(\w+\\?)*\\");
+            Regex pathPattern;
 
             while (true)
             {
-                Console.WriteLine(@"Enter path. Example:  D:\asdfj\asd\");
-
                 path = Console.ReadLine();
+
+                if (path.Length <= 3)
+                {
+                    pathPattern = new Regex(@"D:\\(\w+\\?)*");
+                }
+                else
+                {
+                    pathPattern = new Regex(@"D:\\(\w+\\?)*\\");
+                }
 
                 if (pathPattern.IsMatch(path))
                 {
@@ -58,6 +64,32 @@ namespace Files
             Console.WriteLine("5 - Record to file");
             Console.WriteLine("6 - Read from file");
             Console.WriteLine("7 - Exit");
+        }
+
+        public static void PrintStatusCodeMessage(FileOperations.StatusCode code)
+        {
+            switch (code)
+            {
+                case FileOperations.StatusCode.SuccessPrint:
+                    Console.WriteLine("Success");
+                    break;
+
+                case FileOperations.StatusCode.DirectoryNotExist:
+                    Console.WriteLine("Directory doesn't exist");
+                    break;
+
+                case FileOperations.StatusCode.FileNotExist:
+                    Console.WriteLine("File doesn't exist");
+                    break;
+
+                case FileOperations.StatusCode.DirectorySourceNotExist:
+                    Console.WriteLine("Source directory doesnt exist");
+                    break;
+
+                case FileOperations.StatusCode.DirectoryDestinationNotExist:
+                    Console.WriteLine("Destination directory doesnt exist");
+                    break;
+            }
         }
 
 
@@ -90,35 +122,67 @@ namespace Files
                 string pathTo = null;
                 string pathFrom = null;
                 string name = null;
+                FileOperations.StatusCode statusCode;
 
-                switch(index)
+                switch (index)
                 {
                     case 1:
                         Console.Write("Enter name of file: ");
                         name = Console.ReadLine();
+
+                        Console.WriteLine(@"Enter path. Example:  D:\asdfj\asd\");
                         InputDirectoryPath(ref path);
-                        FileOperations.CreateFile(path, name);
+
+                        statusCode = FileOperations.CreateFile(path, name);
+                        PrintStatusCodeMessage(statusCode);
                         break;
+
+
                     case 2:
+                        Console.WriteLine(@"Enter path of file. Example:  D:\asdfj\asd");
                         InputFilePath(ref path);
-                        FileOperations.DeleteFile(path);
+
+                        statusCode = FileOperations.DeleteFile(path);
+                        PrintStatusCodeMessage(statusCode);
                         break;
+
+
                     case 3:
+                        Console.WriteLine(@"Enter path of file. Example:  D:\asdfj\asd");
                         InputFilePath(ref path);
-                        FileOperations.GetFileInformation(path);
+
+                        statusCode = FileOperations.GetFileInformation(path);
+                        PrintStatusCodeMessage(statusCode);
                         break;
+
+
                     case 4:
-                        InputFilePath(ref pathFrom);
-                        InputFilePath(ref pathTo);
-                        FileOperations.MoveFile(pathFrom, pathTo);
+                        Console.Write("Enter name of file ");
+                        name = Console.ReadLine();
+
+                        Console.WriteLine(@"Enter path to directory of file. Example:  D:\asdfj\asd\");
+                        InputDirectoryPath(ref pathFrom);
+                        
+                        Console.WriteLine(@"Enter destination directory of file. Example:  D:\asdfj\asd1\");
+                        InputDirectoryPath(ref pathTo);
+
+                        statusCode = FileOperations.MoveFile(pathFrom, pathTo, name);
+                        PrintStatusCodeMessage(statusCode);
                         break;
+
+
                     case 5:
                         break;
+
+
                     case 6:
                         break;
+
+
                     case 7:
                         Environment.Exit(0);
                         break;
+
 
                     default:
                         Console.WriteLine("No such index\n");
