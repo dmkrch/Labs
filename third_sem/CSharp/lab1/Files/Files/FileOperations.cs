@@ -128,10 +128,13 @@ namespace Files
         {
             if (File.Exists(path))
             {
-                using (FileStream fstream = new FileStream(path, FileMode.Append))
+                using (FileStream fstream = File.OpenRead(path))
                 {
-                    byte[] array = System.Text.Encoding.Default.GetBytes(data);
-                    //fstream.Read();
+                    byte[] array = new byte[fstream.Length];
+                    // считываем данные
+                    fstream.Read(array, 0, array.Length);
+                    // декодируем байты в строку
+                    data = System.Text.Encoding.Default.GetString(array);
 
                     return StatusCode.SuccessPrint;
                 }
