@@ -194,6 +194,8 @@ namespace Files
 
                         statusCode = FileOperations.ReadFromFile(path, ref data);
                         PrintStatusCodeMessage(statusCode);
+
+                        Console.WriteLine("Your data: {0}", data);
                         break;
 
 
