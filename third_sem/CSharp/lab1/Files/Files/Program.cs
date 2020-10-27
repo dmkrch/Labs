@@ -63,7 +63,9 @@ namespace Files
             Console.WriteLine("4 - Move file");
             Console.WriteLine("5 - Record to file");
             Console.WriteLine("6 - Read from file");
-            Console.WriteLine("7 - Exit");
+            Console.WriteLine("7 - Compress file");
+            Console.WriteLine("8 - Decompress file");
+            Console.WriteLine("9 - Exit");
         }
 
         public static void PrintStatusCodeMessage(FileOperations.StatusCode code)
@@ -127,6 +129,8 @@ namespace Files
                 string pathFrom = null;
                 string name = null;
                 string data = null;
+                string path1 = null;
+
                 FileOperations.StatusCode statusCode;
 
                 switch (index)
@@ -200,9 +204,27 @@ namespace Files
 
 
                     case 7:
-                        Environment.Exit(0);
+                        Console.WriteLine(@"Enter path to file. Example: D:\asdfj;");
+                        InputFilePath(ref path);
+                        Console.WriteLine(@"Enter path for compressed file. Example: D:\asdfj;");
+                        InputFilePath(ref path1);
+
+                        statusCode = FileOperations.CompressFile(path, path1);
+
                         break;
 
+                    case 8:
+                        Console.WriteLine(@"Enter path to compressed file. Example: D:\asdfj;");
+                        InputFilePath(ref path);
+                        Console.WriteLine(@"Enter path for file. Example: D:\asdfj;");
+                        InputFilePath(ref path1);
+
+                        statusCode = FileOperations.DecompressFile(path, path1);
+                        break;
+
+                    case 9:
+                        Environment.Exit(0);
+                        break;
 
                     default:
                         Console.WriteLine("No such index\n");
