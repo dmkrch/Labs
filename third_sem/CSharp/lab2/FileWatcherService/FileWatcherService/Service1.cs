@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Threading;
+using System.Text.RegularExpressions;
+using System.Globalization;
 
 namespace FileWatcherService
 {
@@ -38,7 +40,6 @@ namespace FileWatcherService
     }
 
 
-
     class Logger
     {
         FileSystemWatcher watcher;
@@ -46,11 +47,8 @@ namespace FileWatcherService
         bool enabled = true;
         public Logger()
         {
-            watcher = new FileSystemWatcher("D:\\SourceDirectory");
-            watcher.Deleted += Watcher_Deleted;
+            watcher = new FileSystemWatcher(@"D:\Git\Labs\third_sem\CSharp\lab2\ClientDirectory");
             watcher.Created += Watcher_Created;
-            watcher.Changed += Watcher_Changed;
-            watcher.Renamed += Watcher_Renamed;
         }
 
         public void Start()
@@ -61,51 +59,82 @@ namespace FileWatcherService
                 Thread.Sleep(1000);
             }
         }
+
         public void Stop()
         {
             watcher.EnableRaisingEvents = false;
             enabled = false;
         }
-        // переименование файлов
-        private void Watcher_Renamed(object sender, RenamedEventArgs e)
-        {
-            string fileEvent = "переименован в " + e.FullPath;
-            string filePath = e.OldFullPath;
-            RecordEntry(fileEvent, filePath);
-        }
-        // изменение файлов
-        private void Watcher_Changed(object sender, FileSystemEventArgs e)
-        {
-            string fileEvent = "изменен";
-            string filePath = e.FullPath;
-            RecordEntry(fileEvent, filePath);
-        }
-        // создание файлов
+
+
+        // добавление файлов
         private void Watcher_Created(object sender, FileSystemEventArgs e)
         {
-            string fileEvent = "создан";
+            string fileName = e.Name;
             string filePath = e.FullPath;
-            RecordEntry(fileEvent, filePath);
-        }
-        // удаление файлов
-        private void Watcher_Deleted(object sender, FileSystemEventArgs e)
-        {
-            string fileEvent = "удален";
-            string filePath = e.FullPath;
-            RecordEntry(fileEvent, filePath);
+  
+            Regex filePattern = new Regex(@"Sales_[0-9]{4}_((0[1-9])|(1[0-2]))_((0[1-9])|(1[0-9])|(2[0-9])|(3[0-1]))_((0[0-9])|(1[0-9])|(2[0-3]))_[0-5][0-9]_[0-5][0-9].txt");
+            //                                      year         month                       day                           hour                   minutes     seconds
+
+            if(filePattern.IsMatch(fileName))
+            {
+                /* we need to encrypt the data of file */ 
+                EncryptFile(fileName, filePath);
+
+                /* now we need to compreess this file and move zip file to target directory */
+                CompressAndMove(fileName, filePath);
+
+
+                
+            }
         }
 
-        private void RecordEntry(string fileEvent, string filePath)
+        private void EncryptFile(string fileName, string filePath)
         {
+            var key = "b14ca5898a4e4133bbce2ea2315a1916";
+            string data;
+            string encryptedData;
+
             lock (obj)
             {
-                using (StreamWriter writer = new StreamWriter("D:\\templog.txt", true))
+                using (StreamReader reader = new StreamReader(filePath))
                 {
-                    writer.WriteLine(String.Format("{0} файл {1} был {2}",
-                        DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss"), filePath, fileEvent));
-                    writer.Flush();
+                    data = reader.ReadToEnd();
+                    encryptedData = AesOperation.EncryptString(key, data);
+                }
+
+                using (StreamWriter writer = new StreamWriter(filePath, false))
+                {
+                    writer.WriteLine(encryptedData);
                 }
             }
+        }
+
+        private void CompressAndMove(string fileName, string filePath)
+        {
+            string targetPath = @"D:\Git\Labs\third_sem\CSharp\lab2\TargetDirectory\";
+            targetPath += fileName;
+
+            // now targetPath looks: D:\Git\Labs\third_sem\CSharp\lab2\TargetDirectory\blablabla.txt
+            // we need to change it so that the end of path will have .gz format
+            StringBuilder newPathString = new StringBuilder();
+
+            for (int i = 0; i < targetPath.Length; ++i)
+            {
+                if (targetPath[i] != '.')
+                {
+                    newPathString.Append(targetPath[i]);
+                }
+                else
+                {
+                    newPathString.Append(".gz");
+                    break;
+                }
+            }
+            targetPath = newPathString.ToString();
+            // now targetPath is (...)\blablabla.gz
+
+            FileOperations.CompressFile(filePath, targetPath);
         }
     }
 }
