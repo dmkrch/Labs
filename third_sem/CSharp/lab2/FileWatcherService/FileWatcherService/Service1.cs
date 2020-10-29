@@ -112,18 +112,41 @@ namespace FileWatcherService
 
         private void CompressAndMove(string fileName, string filePath)
         {
-            string targetPath = @"D:\Git\Labs\third_sem\CSharp\lab2\TargetDirectory\";
-            targetPath += fileName;
+            string currPath = @"D:\Git\Labs\third_sem\CSharp\lab2\TargetDirectory\";
 
-            // now targetPath looks: D:\Git\Labs\third_sem\CSharp\lab2\TargetDirectory\blablabla.txt
+            string year = fileName.Substring(6, 4);
+            string month = fileName.Substring(11, 2);
+            string day = fileName.Substring(14, 2);
+            string hour = fileName.Substring(17, 2);
+            string minute = fileName.Substring(20, 2);
+            string second = fileName.Substring(23, 2);
+
+            string[] data = { year, month, day, hour, minute, second };
+
+            foreach (string period in data)
+            {
+                currPath += period;
+
+                DirectoryInfo dirInfo = new DirectoryInfo(currPath);
+
+                if (!dirInfo.Exists)
+                    dirInfo.Create();
+
+                
+                currPath += @"\";
+            }
+
+            currPath += fileName;
+
+            // now targetPath looks: D:\Git\Labs\third_sem\CSharp\lab2\TargetDirectory\...\blablabla.txt
             // we need to change it so that the end of path will have .gz format
             StringBuilder newPathString = new StringBuilder();
 
-            for (int i = 0; i < targetPath.Length; ++i)
+            for (int i = 0; i < currPath.Length; ++i)
             {
-                if (targetPath[i] != '.')
+                if (currPath[i] != '.')
                 {
-                    newPathString.Append(targetPath[i]);
+                    newPathString.Append(currPath[i]);
                 }
                 else
                 {
@@ -131,10 +154,10 @@ namespace FileWatcherService
                     break;
                 }
             }
-            targetPath = newPathString.ToString();
+            currPath = newPathString.ToString();
             // now targetPath is (...)\blablabla.gz
 
-            FileOperations.CompressFile(filePath, targetPath);
+            FileOperations.CompressFile(filePath, currPath);
         }
     }
 }
