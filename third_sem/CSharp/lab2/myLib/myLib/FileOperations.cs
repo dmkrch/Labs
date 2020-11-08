@@ -5,9 +5,9 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.IO.Compression;
 
-namespace FileWatcherService
+namespace myLib
 {
-    static class FileOperations
+    public class FileOperations
     {
         public enum StatusCode
         {
@@ -29,6 +29,7 @@ namespace FileWatcherService
             DirectoryDestinationNotExist,
             DirectorySourceNotExist,
         }
+
 
         public static StatusCode GetFileInformation(string path)
         {

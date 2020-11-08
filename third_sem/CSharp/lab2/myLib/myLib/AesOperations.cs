@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Security.Cryptography;
 
-namespace FileWatcherService
+namespace myLib
 {
-    class AesOperation
+    public class AesOperation
     {
         public static string EncryptString(string key, string plainText)
         {
