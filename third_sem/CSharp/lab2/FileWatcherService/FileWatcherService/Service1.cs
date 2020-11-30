@@ -38,7 +38,9 @@ namespace FileWatcherService
 
         protected override void OnStart(string[] args)
         {
-            logger = new Logger();
+            /* here we need to start our file watcher service. But before this, we need to load options from our configuration file if it exists */
+
+            logger = new Logger();      /* here logger will set needed options for work */
             Thread loggerThread = new Thread(new ThreadStart(logger.Start));
             loggerThread.Start();
         }

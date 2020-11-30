@@ -4,7 +4,6 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Linq;
-//using System.ServiceProcess;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
@@ -15,15 +14,43 @@ using System.Net;
 
 namespace myLib
 {
+    /* class that tracks some changes in directory and process them in needed way  */
     public class Logger
     {
         FileSystemWatcher watcher;
-        object obj = new object();
+        FileWatcherOptions options = new FileWatcherOptions();
         bool enabled = true;
 
         public Logger()
         {
-            watcher = new FileSystemWatcher(@"D:\Git\Labs\third_sem\CSharp\lab2\ClientDirectory");
+            /* here we need to set our configuration options */
+            
+            string baseDirectoryName = AppDomain.CurrentDomain.BaseDirectory;
+            string xmlConfigurationFileName = baseDirectoryName + "xmlConfig.xml";
+            string jsonConfigurationFileName = baseDirectoryName + "jsonConfig.xml";
+
+            if (File.Exists(xmlConfigurationFileName))
+            {
+                XmlParser parser = new XmlParser();
+                
+                /* adding xml parser to configuration manager */
+                ConfigurationManager configurationManager = new ConfigurationManager(parser);
+
+                options.EncryptingOptions = configurationManager.GetOptions<EncryptingOptions>(xmlConfigurationFileName);
+                options.PathsOptions = configurationManager.GetOptions<PathsOptions>(xmlConfigurationFileName);
+                options.CompressOptions = configurationManager.GetOptions<CompressOptions>(xmlConfigurationFileName);
+            }
+            else if (File.Exists(jsonConfigurationFileName))
+            {
+                /* code for json parser */
+            }
+            else
+            {
+                throw new IOException("Configuration file with incorrect extension");
+            }
+
+
+            watcher = new FileSystemWatcher(options.PathsOptions.ClientDirectory);
             watcher.Created += Watcher_Created;
         }
 
@@ -85,7 +112,9 @@ namespace myLib
                 }
                 else
                 {
-                    newPathString.Append(".gz");
+                    /* here we use compress format from options that we set in constructor of logger */
+                    string compressFormat = options.CompressOptions.CompressFormat;
+                    newPathString.Append(compressFormat);
                     break;
                 }
             }
@@ -96,7 +125,8 @@ namespace myLib
 
         private void EncryptFile(string fileName, string filePath)
         {
-            var key = "b14ca5898a4e4133bbce2ea2315a1916";
+            /* here we use key from options that we set in constructor of logger */
+            var key = options.EncryptingOptions.Key;
             string data;
             string encryptedData;
 
@@ -115,7 +145,8 @@ namespace myLib
 
         private void DecryptFile(string fileName, string filePath)
         {
-            var key = "b14ca5898a4e4133bbce2ea2315a1916";
+            /* here we use key from options that we set in constructor of logger */
+            var key = options.EncryptingOptions.Key;
             string data;
             string decryptedData;
 
@@ -133,7 +164,8 @@ namespace myLib
 
         private void CompressAndMoveToTargetDir(string fileName, string filePath)
         {
-            string currPath = @"D:\Git\Labs\third_sem\CSharp\lab2\TargetDirectory\";
+            string currPath = options.PathsOptions.TargetDirectory;
+            currPath += @"\";
 
             string year = fileName.Substring(6, 4);
             string month = fileName.Substring(11, 2);
@@ -172,7 +204,8 @@ namespace myLib
         /* function searchs for directory that contains file in target directory */
         private string GetPathOfFileInTargetDir(string fileName)
         {
-            string targetPathOfFile = @"D:\Git\Labs\third_sem\CSharp\lab2\TargetDirectory\";
+            string targetPathOfFile = options.PathsOptions.TargetDirectory;
+            targetPathOfFile += @"\";
 
             string year = fileName.Substring(6, 4);
             string month = fileName.Substring(11, 2);
