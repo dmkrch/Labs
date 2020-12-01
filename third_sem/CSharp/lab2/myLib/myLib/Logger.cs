@@ -43,6 +43,14 @@ namespace myLib
             else if (File.Exists(jsonConfigurationFileName))
             {
                 /* code for json parser */
+                JsonParser parser = new JsonParser();
+
+                /* adding json parser to confiuration manager */
+                ConfigurationManager configurationManager = new ConfigurationManager(parser);
+
+                options.EncryptingOptions = configurationManager.GetOptions<EncryptingOptions>(jsonConfigurationFileName);
+                options.PathsOptions = configurationManager.GetOptions<PathsOptions>(jsonConfigurationFileName);
+                options.CompressOptions = configurationManager.GetOptions<CompressOptions>(jsonConfigurationFileName);
             }
             else
             {
