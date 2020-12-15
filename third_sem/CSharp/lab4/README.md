@@ -16,4 +16,4 @@
 - procedures - содержит процедуры-запросы, которые необходимы для получения набора данных из бд Northwind
 
 Так же сделана отдельная база данных (ExceptionsDB), в которой содержится таблица Logs, для логирования ошибок
-![alt text](D:\Programming\Labs\third_sem\CSharp\lab4\images\ExceptionsDB.png "Описание")
+![alt text](images/ExceptionsDB.png "Описание")
