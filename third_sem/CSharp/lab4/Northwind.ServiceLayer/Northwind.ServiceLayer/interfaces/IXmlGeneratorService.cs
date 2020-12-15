@@ -1,13 +1,11 @@
 ﻿using Northwind.Models;
 using Northwind.Models.SearchModels;
-
+using System.Collections.Generic;
 
 namespace Northwind.ServiceLayer.interfaces
 {
     public interface IXmlGeneratorService
     {
-        public void GenerateXml(SearchResult<Order> searchResult, string pathToSave, string xmlFileName);
-
-        public void GenerateXsd(string pathToSave, string xmlFileName, string xsdFileName);
+        void XmlGenerate<T>(IEnumerable<T> info);
     }
 }

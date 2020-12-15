@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<FileWatcherOptions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <PathsOptions>
+    <ClientDirectory>D:\Programming\Labs\third_sem\CSharp\lab2\ClientDirectory</ClientDirectory>
+    <TargetDirectory>D:\Programming\Labs\third_sem\CSharp\lab2\TargetDirectory</TargetDirectory>
+    <DBpath1>@Data Source=dmitry;Initial Catalog=Northwind;Integrated Security=True</DBpath1>
+    <DBpath2>@Data Source=dmitry;Initial Catalog=ExceptionsDB;Integrated Security=True</DBpath2>
+  </PathsOptions>
+  <EncryptingOptions>
+    <Key>b14ca5898a4e4133bbce2ea2315a1916</Key>
+  </EncryptingOptions>
+  <CompressOptions>
+    <CompressFormat>.gz</CompressFormat>
+  </CompressOptions>
+ <LogsOption>
+    <errorLogProperty>D:\Programming\Labs\third_sem\CSharp\lab2\TargetDirectory\Errors.txt</errorLogProperty>
+    <logProperty>D:\Programming\Labs\third_sem\CSharp\lab2\TargetDirectory\log.txt</logProperty>
+  </LogsOption>
+</FileWatcherOptions>

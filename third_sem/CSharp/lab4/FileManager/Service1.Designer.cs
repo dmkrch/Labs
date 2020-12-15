@@ -1,6 +1,6 @@
-﻿namespace Northwind.DataManager
+﻿namespace FileManager
 {
-    partial class DataManagerService
+    partial class Service1
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            this.ServiceName = "DataManagerService";
+            this.ServiceName = "Service1";
         }
 
         #endregion

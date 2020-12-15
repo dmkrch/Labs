@@ -17,7 +17,7 @@ namespace Northwind.DataManager
             ServiceBase[] ServicesToRun;
             ServicesToRun = new ServiceBase[]
             {
-                new DataManagerService()
+                new Service1()
             };
             ServiceBase.Run(ServicesToRun);
         }
