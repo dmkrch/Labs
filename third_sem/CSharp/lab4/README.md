@@ -16,7 +16,7 @@
 
 - Northwind.Models - библиотека для моделей службы. Там есть модели заказа и ошибки.
 
-- Nortwind.ServiceLayer - библиотека ServiceLayer - слой для работы с DataAccessLayer. Так же содержит 2 папки: interfaces и implementations.
+- Nortwind.ServiceLayer - слой для работы с DataAccessLayer. Библиотека ServiceLayer содержит 2 папки: interfaces и implementations, для адекватного разделения интерфейсов и их реализации.
 
 - configs - содержит файл конфигурации, с которого берутся опции, необходимые как для службы FileManager, так и для Northwind.DataManager
 
