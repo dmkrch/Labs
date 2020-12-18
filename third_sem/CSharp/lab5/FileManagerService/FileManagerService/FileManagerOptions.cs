@@ -13,12 +13,14 @@ namespace FileManagerService
         public PathsOptions PathsOptions { get; set; }
         public EncryptingOptions EncryptingOptions { get; set; }
         public CompressOptions CompressOptions { get; set; }
+        public FileSearchRegexOptions FileSearchRegexOptions { get; set; }
 
         public FileManagerOptions()
         {
             this.PathsOptions = new PathsOptions();
             this.EncryptingOptions = new EncryptingOptions();
             this.CompressOptions = new CompressOptions();
+            this.FileSearchRegexOptions = new FileSearchRegexOptions();
         }
     }
 
@@ -42,5 +44,11 @@ namespace FileManagerService
     public class CompressOptions
     {
         public string CompressFormat { get; set; }
+    }
+
+    public class FileSearchRegexOptions
+    {
+        public string SalesFormat { get; set; }
+        public string AnyNameFormat { get; set; }
     }
 }

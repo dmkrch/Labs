@@ -1,6 +1,4 @@
-﻿using Northwind.Models;
-using Northwind.Models.SearchModels;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Northwind.ServiceLayer.interfaces
 {

@@ -20,9 +20,8 @@ namespace FileManagerService
         {
             /* here we need to set our configuration options */
 
-            string baseDirectoryName = AppDomain.CurrentDomain.BaseDirectory;
-            string xmlConfigurationFileName = baseDirectoryName + "xmlConfig.xml";
-            string jsonConfigurationFileName = baseDirectoryName + "jsonConfig.xml";
+            string xmlConfigurationFileName = @"D:\Programming\Labs\third_sem\CSharp\lab5\configs\FileManagerConfig.xml";
+            string jsonConfigurationFileName = @"D:\Programming\Labs\third_sem\CSharp\lab5\configs\FileManagerConfig.xml";
 
             if (File.Exists(xmlConfigurationFileName))
             {
@@ -34,6 +33,7 @@ namespace FileManagerService
                 options.EncryptingOptions = configurationManager.GetOptions<EncryptingOptions>(xmlConfigurationFileName);
                 options.PathsOptions = configurationManager.GetOptions<PathsOptions>(xmlConfigurationFileName);
                 options.CompressOptions = configurationManager.GetOptions<CompressOptions>(xmlConfigurationFileName);
+                options.FileSearchRegexOptions = configurationManager.GetOptions<FileSearchRegexOptions>(xmlConfigurationFileName);
             }
             else if (File.Exists(jsonConfigurationFileName))
             {
@@ -46,6 +46,7 @@ namespace FileManagerService
                 options.EncryptingOptions = configurationManager.GetOptions<EncryptingOptions>(jsonConfigurationFileName);
                 options.PathsOptions = configurationManager.GetOptions<PathsOptions>(jsonConfigurationFileName);
                 options.CompressOptions = configurationManager.GetOptions<CompressOptions>(jsonConfigurationFileName);
+                options.FileSearchRegexOptions = configurationManager.GetOptions<FileSearchRegexOptions>(xmlConfigurationFileName);
             }
             else
             {
@@ -81,7 +82,8 @@ namespace FileManagerService
             string fileName = e.Name;
             string filePath = e.FullPath;
 
-            Regex filePattern = new Regex(@"Sales_[0-9]{4}_((0[1-9])|(1[0-2]))_((0[1-9])|(1[0-9])|(2[0-9])|(3[0-1]))_((0[0-9])|(1[0-9])|(2[0-3]))_[0-5][0-9]_[0-5][0-9].txt");
+            Regex filePattern = new Regex(options.FileSearchRegexOptions.SalesFormat);
+            //Regex filePattern = new Regex(@"Sales_[0-9]{4}_((0[1-9])|(1[0-2]))_((0[1-9])|(1[0-9])|(2[0-9])|(3[0-1]))_((0[0-9])|(1[0-9])|(2[0-3]))_[0-5][0-9]_[0-5][0-9].txt");
             //                                      year         month                       day                           hour                   minutes     seconds
 
             if (filePattern.IsMatch(fileName))

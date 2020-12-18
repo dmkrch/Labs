@@ -1,16 +1,9 @@
-﻿using ConfigurationManager;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Linq;
+﻿using System;
 using System.ServiceProcess;
 using Northwind.DataAccessLayer.Repository.implementations;
 using FileManager;
 using Northwind.ServiceLayer.implementations;
 using Northwind.Models;
-using MyConfigurationManager;
 
 namespace Northwind.DataManager
 {
