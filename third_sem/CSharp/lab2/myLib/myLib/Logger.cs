@@ -5,7 +5,6 @@ using System.Data;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 using System.Threading;
 using System.Text.RegularExpressions;
@@ -13,7 +12,7 @@ using System.Globalization;
 using System.Net;
 
 namespace myLib
-{
+{ 
     /* class that tracks some changes in directory and process them in needed way  */
     public class Logger
     {
