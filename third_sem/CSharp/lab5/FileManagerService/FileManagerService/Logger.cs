@@ -82,8 +82,8 @@ namespace FileManagerService
             string fileName = e.Name;
             string filePath = e.FullPath;
 
-            Regex filePattern = new Regex(options.FileSearchRegexOptions.SalesFormat);
-            //Regex filePattern = new Regex(@"Sales_[0-9]{4}_((0[1-9])|(1[0-2]))_((0[1-9])|(1[0-9])|(2[0-9])|(3[0-1]))_((0[0-9])|(1[0-9])|(2[0-3]))_[0-5][0-9]_[0-5][0-9].txt");
+            Regex filePattern = new Regex(options.FileSearchRegexOptions.OrdersXmlFormat);
+            //Regex filePattern = new Regex(@"Orders_[0-9]{4}_((0[1-9])|(1[0-2]))_((0[1-9])|(1[0-9])|(2[0-9])|(3[0-1]))_((0[0-9])|(1[0-9])|(2[0-3]))_[0-5][0-9]_[0-5][0-9].xml");
             //                                      year         month                       day                           hour                   minutes     seconds
 
             if (filePattern.IsMatch(fileName))
@@ -172,12 +172,17 @@ namespace FileManagerService
             string currPath = options.PathsOptions.TargetDirectory;
             currPath += @"\";
 
-            string year = fileName.Substring(6, 4);
-            string month = fileName.Substring(11, 2);
-            string day = fileName.Substring(14, 2);
-            string hour = fileName.Substring(17, 2);
-            string minute = fileName.Substring(20, 2);
-            string second = fileName.Substring(23, 2);
+            int letterPos; 
+
+            for (letterPos = 0; fileName[letterPos] != '_'; ++letterPos);
+            letterPos++;
+
+            string year = fileName.Substring(letterPos, 4);    
+            string month = fileName.Substring(letterPos+5, 2);      
+            string day = fileName.Substring(letterPos+8, 2);    
+            string hour = fileName.Substring(letterPos+11, 2);        
+            string minute = fileName.Substring(letterPos+14, 2);      
+            string second = fileName.Substring(letterPos+17, 2);      
 
             string[] data = { year, month, day, hour, minute, second };
 

@@ -48,7 +48,7 @@ namespace FileManagerService
 
     public class FileSearchRegexOptions
     {
-        public string SalesFormat { get; set; }
-        public string AnyNameFormat { get; set; }
+        public string SalesTxtFormat { get; set; }
+        public string OrdersXmlFormat { get; set; }
     }
 }
