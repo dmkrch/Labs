@@ -216,13 +216,17 @@ namespace FileManagerService
         {
             string targetPathOfFile = options.PathsOptions.TargetDirectory;
             targetPathOfFile += @"\";
+            int letterPos;
 
-            string year = fileName.Substring(6, 4);
-            string month = fileName.Substring(11, 2);
-            string day = fileName.Substring(14, 2);
-            string hour = fileName.Substring(17, 2);
-            string minute = fileName.Substring(20, 2);
-            string second = fileName.Substring(23, 2);
+            for (letterPos = 0; fileName[letterPos] != '_'; ++letterPos) ;
+            letterPos++;
+
+            string year = fileName.Substring(letterPos, 4);
+            string month = fileName.Substring(letterPos + 5, 2);
+            string day = fileName.Substring(letterPos + 8, 2);
+            string hour = fileName.Substring(letterPos + 11, 2);
+            string minute = fileName.Substring(letterPos + 14, 2);
+            string second = fileName.Substring(letterPos + 17, 2);
 
             string[] data = { year, month, day, hour, minute, second };
 

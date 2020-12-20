@@ -3,6 +3,7 @@ using Northwind.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.IO;
 using System.Threading;
 
 namespace Northwind.DataAccessLayer.Repository.implementations
@@ -80,7 +81,18 @@ namespace Northwind.DataAccessLayer.Repository.implementations
         {
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
-                connection.Open();                  //  here is the problem !!!!!!
+                try
+                {
+
+                    connection.Open();                  //  here is the problem !!!!!!
+                }
+                catch(Exception ex)
+                {
+                    using (StreamWriter sw = new StreamWriter(@"D:\Programming\Labs\third_sem\CSharp\lab5\errors.txt", false, System.Text.Encoding.Default))
+                    {
+                        sw.WriteLine(ex.Message);
+                    }
+                }
                 var orders = new List<Order>();
 
                 try
@@ -116,7 +128,7 @@ namespace Northwind.DataAccessLayer.Repository.implementations
                         }
                     }
                     reader.Close();
-
+                
                     return orders;
                 }
                 catch (Exception trouble)
