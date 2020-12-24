@@ -9,7 +9,7 @@
 
 ## Реализация
 ### Структура проекта
-![Image alt](https://github.com/dmkrch/Labs/blob/master/third_sem/CSharp/lab5/images/projectStructure.png)
+![Image alt](https://github.com/dmkrch/Labs/blob/master/third_sem/CSharp/lab5/images/projectStructure1.png)
 ---
 
 
