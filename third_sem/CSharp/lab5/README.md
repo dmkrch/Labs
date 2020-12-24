@@ -56,4 +56,5 @@ options грузятся данные из xml-файла (configs/DataManagerCo
 
 ### После этого по указанному пути (configs->DataManagerConfig.xml->DestinationDirectory) формируется xml-файл с заказами.
 ---
-Для демонстрации работы двух служб, прилагается видео, которое придется скачать (video->demonstration.mp4)
+Для демонстрации работы двух служб, прилагается видео https://youtu.be/HHRV2izid0Q либо, если не удается открыть,
+можно скачать (video->demonstration.mp4)
