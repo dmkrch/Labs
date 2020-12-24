@@ -39,7 +39,7 @@ namespace Northwind.DataManagerService
 
                 /* adding xml parser to configuration manager */
                 ConfigManager configurationManager = new ConfigManager(parser);
-
+                
 
                 options.PathsOptions = configurationManager.GetOptions<PathsOptions>(xmlConfigurationFileName);
             }
