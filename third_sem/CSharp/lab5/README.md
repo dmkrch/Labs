@@ -9,14 +9,16 @@
 ```
 
 ## Реализация
-### Структура проекта
+###   Структура проекта
 ![Image alt](https://github.com/dmkrch/Labs/blob/master/third_sem/CSharp/lab5/images/projectStructure1.png)
 ---
 
-### Подробнее о структуре:
+###   Подробнее о структуре:
 - ***ConfigurationManager*** - библиотека для конфигурации, разработанная в 3 лабе.
 
 - ***FileManager*** - служба из прошлой рабораторной, которая отслеживает добавление файлов в clientDirectory, делает нужные действия и кидает в targetDirectory
+
+- ***FileOperations*** - библиотека для различных операций с файлами.
 
 - ***Northwind.DataAccessLayer*** - слой работы с базой данных. В библиотеке есть 2 папки: interfaces и implementations, для адекватного разделения интерфейсов и их реализации.
 
