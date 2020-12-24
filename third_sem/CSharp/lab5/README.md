@@ -33,7 +33,7 @@
 - ***procedures*** - содержит процедуры-запросы, которые необходимы для получения набора данных из бд Northwind. Там лежит 3 процедуры - достать заказ по id, достать 30 заказов, отправить сообщение об ошибке в отдельную базу данных (ExceptionsDB)
 ---
 ## Как работает служба DataManagerService:
-### Главный метод службы - OnStart(args) работает в условных 4 этапа:
+### Главный метод службы - OnStart (Northwind.DataManagerService -> Service1.cs) работает в условных 4 этапа:
 
 1. Происходит конфигурация опций, нужных для DataManagerService: Сначала
 устанавливается парсер для ConfiguratonManager, затем в глобальный объект
@@ -49,4 +49,7 @@ options грузятся данные из xml-файла (configs/DataManagerCo
 4. Создание xml файла, на основе коллекции ordersInfo и имени файла,
 который нужно создать
 ![Image alt](https://github.com/dmkrch/Labs/blob/master/third_sem/CSharp/lab5/images/generateXml.png)
+
+## После этого по указанному пути (configs->DataManagerConfig.xml->DestinationDirectory)
+Формируется xml-файл с заказами.
 ---
