@@ -38,16 +38,20 @@
 1. Происходит конфигурация опций, нужных для DataManagerService: Сначала
 устанавливается парсер для ConfiguratonManager, затем в глобальный объект
 options грузятся данные из xml-файла (configs/DataManagerConfig.xml)
+
 ![Image alt](https://github.com/dmkrch/Labs/blob/master/third_sem/CSharp/lab5/images/managerConfig.png)
 
 2. Получение моделей заказов из базы данных в коллекцию ordersInfo
+
 ![Image alt](https://github.com/dmkrch/Labs/blob/master/third_sem/CSharp/lab5/images/gettingOrderList.png)
 
 3. Формирование имени xml файла на основе текущего времени
+
 ![Image alt](https://github.com/dmkrch/Labs/blob/master/third_sem/CSharp/lab5/images/xmlFileName.png)
 
 4. Создание xml файла, на основе коллекции ordersInfo и имени файла,
 который нужно создать
+
 ![Image alt](https://github.com/dmkrch/Labs/blob/master/third_sem/CSharp/lab5/images/generateXml.png)
 
 ## После этого по указанному пути (configs->DataManagerConfig.xml->DestinationDirectory)
