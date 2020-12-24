@@ -13,20 +13,20 @@
 ![Image alt](https://github.com/dmkrch/Labs/blob/master/third_sem/CSharp/lab5/images/projectStructure1.png)
 ---
 
-## Подробнее о структуре:
-- **ConfigurationManager** - библиотека для конфигурации, разработанная в 3 лабе.
+### Подробнее о структуре:
+- ***ConfigurationManager*** - библиотека для конфигурации, разработанная в 3 лабе.
 
-- **FileManager** - служба из прошлой рабораторной, которая отслеживает добавление файлов в clientDirectory, делает нужные действия и кидает в targetDirectory
+- ***FileManager*** - служба из прошлой рабораторной, которая отслеживает добавление файлов в clientDirectory, делает нужные действия и кидает в targetDirectory
 
-- **Northwind.DataAccessLayer** - слой работы с базой данных. В библиотеке есть 2 папки: interfaces и implementations, для адекватного разделения интерфейсов и их реализации.
+- ***Northwind.DataAccessLayer*** - слой работы с базой данных. В библиотеке есть 2 папки: interfaces и implementations, для адекватного разделения интерфейсов и их реализации.
 
-- **Northwind.DataManager** - собственно новая служба, которая генерит xml файл на основе данных и кидает его в clientDirectory
+- ***Northwind.DataManager*** - собственно новая служба, которая генерит xml файл на основе данных и кидает его в clientDirectory
 
-- **Northwind.Models** - библиотека для моделей службы. Там есть модели заказа и ошибки.
+- ***Northwind.Models*** - библиотека для моделей службы. Там есть модели заказа и ошибки.
 
-- **Nortwind.ServiceLayer** - слой для работы с DataAccessLayer. Библиотека ServiceLayer содержит 2 папки: interfaces и implementations, для адекватного разделения интерфейсов и их реализации.
+- ***Nortwind.ServiceLayer*** - слой для работы с DataAccessLayer. Библиотека ServiceLayer содержит 2 папки: interfaces и implementations, для адекватного разделения интерфейсов и их реализации.
 
-- **configs** - содержит файлы конфигурации, с которых берутся опции, необходимые как для службы FileManager, так и для Northwind.DataManager
+- ***configs*** - содержит файлы конфигурации, с которых берутся опции, необходимые как для службы FileManager, так и для Northwind.DataManager
 
-- **procedures** - содержит процедуры-запросы, которые необходимы для получения набора данных из бд Northwind. Там лежит 3 процедуры - достать заказ по id, достать 30 заказов, отправить сообщение об ошибке в отдельную базу данных (ExceptionsDB)
+- ***procedures*** - содержит процедуры-запросы, которые необходимы для получения набора данных из бд Northwind. Там лежит 3 процедуры - достать заказ по id, достать 30 заказов, отправить сообщение об ошибке в отдельную базу данных (ExceptionsDB)
 ---
