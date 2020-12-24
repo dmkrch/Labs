@@ -34,7 +34,7 @@
 ---
 ## Как работает служба DataManagerService:
 ### Главный метод службы - OnStart(args) работает в условных 4 этапа:
-```
+
 1. Происходит конфигурация опций, нужных для DataManagerService: Сначала
 устанавливается парсер для ConfiguratonManager, затем в глобальный объект
 options грузятся данные из xml-файла (configs/DataManagerConfig.xml)
@@ -49,4 +49,4 @@ options грузятся данные из xml-файла (configs/DataManagerCo
 4. Создание xml файла, на основе коллекции ordersInfo и имени файла,
 который нужно создать
 ![Image alt](https://github.com/dmkrch/Labs/blob/master/third_sem/CSharp/lab5/images/generateXml.png)
-```
+---
