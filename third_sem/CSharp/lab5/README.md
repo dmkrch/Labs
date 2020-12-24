@@ -54,6 +54,5 @@ options грузятся данные из xml-файла (configs/DataManagerCo
 
 ![Image alt](https://github.com/dmkrch/Labs/blob/master/third_sem/CSharp/lab5/images/generateXml.png)
 
-## После этого по указанному пути (configs->DataManagerConfig.xml->DestinationDirectory)
-Формируется xml-файл с заказами.
+### После этого по указанному пути (configs->DataManagerConfig.xml->DestinationDirectory) формируется xml-файл с заказами.
 ---
