@@ -9,8 +9,8 @@
 ```
 
 ## Реализация
-  ### Структура проекта
-![Image alt](https://github.com/dmkrch/Labs/blob/master/third_sem/CSharp/lab5/images/projectStructure1.png)
+### Структура проекта
+![Image alt](https://github.com/dmkrch/Labs/blob/master/third_sem/CSharp/lab5/images/projectStructure.png)
 ---
 
   ### Подробнее о структуре:
@@ -22,7 +22,7 @@
 
 - ***Northwind.DataAccessLayer*** - слой работы с базой данных. В библиотеке есть 2 папки: interfaces и implementations, для адекватного разделения интерфейсов и их реализации.
 
-- ***Northwind.DataManager*** - собственно новая служба, которая генерит xml файл на основе данных и кидает его в clientDirectory
+- ***Northwind.DataManagerService*** - собственно новая служба, которая генерит xml файл на основе данных и кидает его в clientDirectory
 
 - ***Northwind.Models*** - библиотека для моделей службы. Там есть модели заказа и ошибки.
 
@@ -32,3 +32,21 @@
 
 - ***procedures*** - содержит процедуры-запросы, которые необходимы для получения набора данных из бд Northwind. Там лежит 3 процедуры - достать заказ по id, достать 30 заказов, отправить сообщение об ошибке в отдельную базу данных (ExceptionsDB)
 ---
+## Как работает служба DataManagerService:
+### Главный метод службы - OnStart(args) работает в условных 4 этапа:
+```
+1. Происходит конфигурация опций, нужных для DataManagerService: Сначала
+устанавливается парсер для ConfiguratonManager, затем в глобальный объект
+options грузятся данные из xml-файла (configs/DataManagerConfig.xml)
+![Image alt](https://github.com/dmkrch/Labs/blob/master/third_sem/CSharp/lab5/images/managerConfig.png)
+
+2. Получение моделей заказов из базы данных в коллекцию ordersInfo
+![Image alt](https://github.com/dmkrch/Labs/blob/master/third_sem/CSharp/lab5/images/gettingOrderList.png)
+
+3. Формирование имени xml файла на основе текущего времени
+![Image alt](https://github.com/dmkrch/Labs/blob/master/third_sem/CSharp/lab5/images/xmlFileName.png)
+
+4. Создание xml файла, на основе коллекции ordersInfo и имени файла,
+который нужно создать
+![Image alt](https://github.com/dmkrch/Labs/blob/master/third_sem/CSharp/lab5/images/generateXml.png)
+```
