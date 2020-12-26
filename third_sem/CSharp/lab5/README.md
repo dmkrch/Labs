@@ -1,5 +1,6 @@
 # Лабораторная работа №5(+ 1,2,3,4)
 
+## Здесь будет описание к 4 лабе, описание к 5 лабе листаем ниже
 ## Задание
 ```
 Создать новую службу, которая на основе данных из базы данных (в моем случае Northwind) 
@@ -13,7 +14,7 @@
 ![Image alt](https://github.com/dmkrch/Labs/blob/master/third_sem/CSharp/lab5/images/projectStructure.png)
 ---
 
-  ### Подробнее о структуре:
+### Подробнее о структуре:
 - ***ConfigurationManager*** - библиотека для конфигурации, разработанная в 3 лабе.
 
 - ***FileManager*** - служба из прошлой рабораторной, которая отслеживает добавление файлов в clientDirectory, делает нужные действия и кидает в targetDirectory
@@ -56,5 +57,22 @@ options грузятся данные из xml-файла (configs/DataManagerCo
 
 ### После этого по указанному пути (configs->DataManagerConfig.xml->DestinationDirectory) формируется xml-файл с заказами.
 ---
-Для демонстрации работы двух служб, прилагается видео https://youtu.be/HHRV2izid0Q либо, если не удается открыть,
+
+
+# Лабораторная работа №5(+ 1,2,3,4)
+
+## Что было сделано:
+Перевел многие методы в асинхронный режим. Использовал стиль TAP, как было указано в требованиях
+Изменения затронули следующие места:
+1. Northwind.DataAccessLayer 
+2. Northwind.ServiceLayer
+3. FileManagerService (IO operations)
+4. DataManagerService
+
+Так же, на каждую итерацию работы сервисов запускается отдельный поток (потоки из ThreadPool)
+![Image alt](https://github.com/dmkrch/Labs/blob/master/third_sem/CSharp/lab5/images/threadPool.png)
+
+---
+Для демонстрации работы двух служб, прилагается видео https://youtu.be/TahKVuj5pDY либо, если не удается открыть,
 можно скачать (video->demonstration.mp4)
+---
