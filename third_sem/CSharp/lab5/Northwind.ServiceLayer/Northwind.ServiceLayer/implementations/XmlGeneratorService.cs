@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Threading.Tasks;
 using System.Xml.Serialization;
 
 namespace Northwind.ServiceLayer.implementations
@@ -15,9 +16,9 @@ namespace Northwind.ServiceLayer.implementations
             pathToXml = path;
         }
 
-        public void XmlGenerate<T>(IEnumerable<T> info)
+        public async Task XmlGenerate<T>(IEnumerable<T> info)
         {
-            try
+            await Task.Run(() =>
             {
                 List<T> orders = new List<T>(info);
 
@@ -27,12 +28,7 @@ namespace Northwind.ServiceLayer.implementations
                 {
                     formatter.Serialize(fstream, orders);
                 }
-            }
-            catch (Exception trouble)
-            {
-                throw trouble;
-            }
-
+            });
         }
     }
 }

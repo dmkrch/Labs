@@ -1,9 +1,11 @@
 ﻿using Northwind.Models;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Northwind.ServiceLayer.interfaces
 {
     public interface IOrderService
     {
-        Order GetInfo(int? id);
+        Task<IEnumerable<Order>> GetListOfOrders();
     }
 }

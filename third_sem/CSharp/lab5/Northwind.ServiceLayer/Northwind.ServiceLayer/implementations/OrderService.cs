@@ -1,7 +1,9 @@
 ﻿using Northwind.DataAccessLayer.Repository.interfaces;
 using Northwind.Models;
 using Northwind.ServiceLayer.interfaces;
+using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Northwind.ServiceLayer.implementations
 {
@@ -15,16 +17,16 @@ namespace Northwind.ServiceLayer.implementations
             _Database = unitOfWork;
         }
 
-        public IEnumerable<Order> GetListOfOrders()
-        {
-            return _Database.Orders.GetAll();
-        }
+        private async Task<IEnumerable<Order>> GetOrders() => await _Database.Orders.GetAll();
 
-        public Order GetInfo(int? id)
-        {
-            var order = _Database.Orders.Get(id.Value);
 
-            return order;
+        public async Task<IEnumerable<Order>> GetListOfOrders()
+        {
+            return await Task.Run(async () =>
+            {
+                var orders = await GetOrders();
+                return orders;
+            });
         }
     }
 }

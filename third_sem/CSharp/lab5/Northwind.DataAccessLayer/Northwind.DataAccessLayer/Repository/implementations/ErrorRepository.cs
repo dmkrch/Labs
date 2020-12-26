@@ -3,7 +3,7 @@ using Northwind.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-
+using System.Threading.Tasks;
 
 namespace Northwind.DataAccessLayer.Repository.implementations
 {
@@ -57,12 +57,12 @@ namespace Northwind.DataAccessLayer.Repository.implementations
             throw new NotImplementedException();
         }
 
-        public Error Get(int id)
+        public Task<Error> Get(int id)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Error> GetAll()
+        public Task<IEnumerable<Error>> GetAll()
         {
             throw new NotImplementedException();
         }

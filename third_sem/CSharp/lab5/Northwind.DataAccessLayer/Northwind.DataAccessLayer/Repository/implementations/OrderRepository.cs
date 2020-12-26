@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.IO;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace Northwind.DataAccessLayer.Repository.implementations
 {
@@ -32,71 +33,63 @@ namespace Northwind.DataAccessLayer.Repository.implementations
             throw new NotImplementedException();
         }
 
-        public Order Get(int id)
+        public async Task<Order> Get(int id)
         {
-            using (SqlConnection connection = new SqlConnection(_connectionString))
+            return await Task.Run(() =>
             {
-                connection.Open();
-
-                try
+                using (SqlConnection connection = new SqlConnection(_connectionString))
                 {
-                    var command = new SqlCommand("GetOrderInfo", connection)
-                    {
-                        CommandType = System.Data.CommandType.StoredProcedure
-                    };
+                    connection.Open();
 
-                    var reader = command.ExecuteReader();
-                    var order = new Order();
-
-                    if (reader.HasRows)
+                    try
                     {
-                        while (reader.Read())
+                        var command = new SqlCommand("GetOrderInfo", connection)
                         {
-                            order.OrderID = reader.GetInt32(0);
-                            order.FirstName = reader.GetString(1);
-                            order.LastName = reader.GetString(2);
-                            order.ShipCountry = reader.GetString(3);
-                            order.ShipCity = reader.GetString(4);
-                            order.ShipAddress = reader.GetString(5);
-                            order.Freight = reader.GetInt32(6);
-                            order.ShipName = reader.GetString(7);
-                            order.ContactName = reader.GetString(8);
-                            order.CompanyName = reader.GetString(9);
-                            order.Phone = reader.GetString(10);
-                        }
-                    }
-                    reader.Close();
+                            CommandType = System.Data.CommandType.StoredProcedure
+                        };
 
-                    return order;
+                        var reader = command.ExecuteReader();
+                        var order = new Order();
+
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                order.OrderID = reader.GetInt32(0);
+                                order.FirstName = reader.GetString(1);
+                                order.LastName = reader.GetString(2);
+                                order.ShipCountry = reader.GetString(3);
+                                order.ShipCity = reader.GetString(4);
+                                order.ShipAddress = reader.GetString(5);
+                                order.Freight = reader.GetInt32(6);
+                                order.ShipName = reader.GetString(7);
+                                order.ContactName = reader.GetString(8);
+                                order.CompanyName = reader.GetString(9);
+                                order.Phone = reader.GetString(10);
+                            }
+                        }
+                        reader.Close();
+
+                        return order;
+                    }
+                    catch (Exception trouble)
+                    {
+                        throw trouble;
+                    }
                 }
-                catch (Exception trouble)
-                {
-                    throw trouble;
-                }
-            }
+            });
         }
 
-
-        public IEnumerable<Order> GetAll()
+        public async Task<IEnumerable<Order>> GetAll()
         {
-            using (SqlConnection connection = new SqlConnection(_connectionString))
+            return await Task.Run(() =>
             {
-                try
-                {
-
-                    connection.Open();                  //  here is the problem !!!!!!
-                }
-                catch(Exception ex)
-                {
-                    using (StreamWriter sw = new StreamWriter(@"D:\Programming\Labs\third_sem\CSharp\lab5\errors.txt", false, System.Text.Encoding.Default))
-                    {
-                        sw.WriteLine(ex.Message);
-                    }
-                }
                 var orders = new List<Order>();
 
-                try
+                using (SqlConnection connection = new SqlConnection(_connectionString))
                 {
+                    connection.Open();
+
                     var command = new SqlCommand("GetOrdersInfo", connection)
                     {
                         CommandType = System.Data.CommandType.StoredProcedure
@@ -104,38 +97,32 @@ namespace Northwind.DataAccessLayer.Repository.implementations
 
                     var reader = command.ExecuteReader();
 
-                    
                     if (reader.HasRows)
                     {
-                            while (reader.Read())
-                            {
-                                var order = new Order();
+                        while (reader.Read())
+                        {
+                            var order = new Order();
 
-                                order.OrderID = reader.GetInt32(0);
-                                order.FirstName = reader.GetString(1);
-                                order.LastName = reader.GetString(2);
-                                order.ShipCountry = reader.GetString(3);
-                                order.ShipCity = reader.GetString(4);
-                                order.ShipAddress = reader.GetString(5);
-                                order.Freight = reader.GetDecimal(6);
-                                order.ShipName = reader.GetString(7);
-                                order.ContactName = reader.GetString(8);
-                                order.CompanyName = reader.GetString(9);
-                                order.Phone = reader.GetString(10);
+                            order.OrderID = reader.GetInt32(0);
+                            order.FirstName = reader.GetString(1);
+                            order.LastName = reader.GetString(2);
+                            order.ShipCountry = reader.GetString(3);
+                            order.ShipCity = reader.GetString(4);
+                            order.ShipAddress = reader.GetString(5);
+                            order.Freight = reader.GetDecimal(6);
+                            order.ShipName = reader.GetString(7);
+                            order.ContactName = reader.GetString(8);
+                            order.CompanyName = reader.GetString(9);
+                            order.Phone = reader.GetString(10);
 
 
-                                orders.Add(order);
+                            orders.Add(order);
                         }
                     }
-                    reader.Close();
-                
-                    return orders;
                 }
-                catch (Exception trouble)
-                {
-                    throw trouble;
-                }
-            }
+
+                return orders;
+            });
         }
     }
 }

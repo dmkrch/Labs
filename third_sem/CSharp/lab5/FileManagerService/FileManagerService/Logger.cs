@@ -6,6 +6,7 @@ using System.Text.RegularExpressions;
 using ConfigurationManager.Parsers.parsers;
 using FileOperations;
 using ConfigurationManager;
+using System.Threading.Tasks;
 
 namespace FileManagerService
 {
@@ -77,32 +78,33 @@ namespace FileManagerService
         // добавление файлов
         private void Watcher_Created(object sender, FileSystemEventArgs e)
         {
-            Thread.Sleep(1000);
-
-            string fileName = e.Name;
-            string filePath = e.FullPath;
-
-            Regex filePattern = new Regex(options.FileSearchRegexOptions.OrdersXmlFormat);
-            //Regex filePattern = new Regex(@"Orders_[0-9]{4}_((0[1-9])|(1[0-2]))_((0[1-9])|(1[0-9])|(2[0-9])|(3[0-1]))_((0[0-9])|(1[0-9])|(2[0-3]))_[0-5][0-9]_[0-5][0-9].xml");
-            //                                      year         month                       day                           hour                   minutes     seconds
-
-            if (filePattern.IsMatch(fileName))
+            ThreadPool.QueueUserWorkItem(async state =>
             {
-                /* we need to encrypt the data of file */
-                EncryptFile(fileName, filePath);
+                string fileName = e.Name;
+                string filePath = e.FullPath;
 
-                /* now we need to compress this file and move this archieve to target directory */
-                CompressAndMoveToTargetDir(fileName, filePath);
+                Regex filePattern = new Regex(options.FileSearchRegexOptions.OrdersXmlFormat);
+                //Regex filePattern = new Regex(@"Orders_[0-9]{4}_((0[1-9])|(1[0-2]))_((0[1-9])|(1[0-9])|(2[0-9])|(3[0-1]))_((0[0-9])|(1[0-9])|(2[0-3]))_[0-5][0-9]_[0-5][0-9].xml");
+                //                                      year         month                       day                           hour                   minutes     seconds
 
-                /* now we need to decompress archieve(compressed file) by its name ( so we do search in function as well ) */
-                DecompressFileToTargetDir(fileName, filePath);
+                if (filePattern.IsMatch(fileName))
+                {
+                    /* we need to encrypt the data of file */
+                    await EncryptFile(fileName, filePath);
 
-                /* now we need to decrypt the data of file decompressed file */
-                string newPath = GetPathOfFileInTargetDir(fileName);
-                newPath += fileName;
+                    /* now we need to compress this file and move this archieve to target directory */
+                    await CompressAndMoveToTargetDir(fileName, filePath);
 
-                DecryptFile(fileName, newPath);
-            }
+                    /* now we need to decompress archieve(compressed file) by its name ( so we do search in function as well ) */
+                    await DecompressFileToTargetDir(fileName, filePath);
+
+                    /* now we need to decrypt the data of file decompressed file */
+                    string newPath = GetPathOfFileInTargetDir(fileName);
+                    newPath += fileName;
+
+                    await DecryptFile(fileName, newPath);
+                }
+            });
         }
 
         private string GetGzFormat(string initFormat)
@@ -128,87 +130,96 @@ namespace FileManagerService
             return initFormat;
         }
 
-        private void EncryptFile(string fileName, string filePath)
+        private async Task EncryptFile(string fileName, string filePath)
         {
-            /* here we use key from options that we set in constructor of logger */
-            var key = options.EncryptingOptions.Key;
-            string data;
-            string encryptedData;
-
-            using (StreamReader reader = new StreamReader(filePath))
+            await Task.Run(() =>
             {
-                data = reader.ReadToEnd();
+                /* here we use key from options that we set in constructor of logger */
+                var key = options.EncryptingOptions.Key;
+                string data;
+                string encryptedData;
 
-                encryptedData = AesOperation.EncryptString(key, data);
-            }
+                using (StreamReader reader = new StreamReader(filePath))
+                {
+                    data = reader.ReadToEnd();
 
-            using (StreamWriter writer = new StreamWriter(filePath, false))
-            {
-                writer.WriteLine(encryptedData);
-            }
+                    encryptedData = AesOperation.EncryptString(key, data);
+                }
+
+                using (StreamWriter writer = new StreamWriter(filePath, false))
+                {
+                    writer.WriteLine(encryptedData);
+                }
+            });
         }
 
-        private void DecryptFile(string fileName, string filePath)
+        private async Task DecryptFile(string fileName, string filePath)
         {
-            /* here we use key from options that we set in constructor of logger */
-            var key = options.EncryptingOptions.Key;
-            string data;
-            string decryptedData;
-
-            using (StreamReader reader = new StreamReader(filePath))
+            await Task.Run(() =>
             {
-                data = reader.ReadToEnd();
-                decryptedData = AesOperation.DecryptString(key, data);
-            }
+                /* here we use key from options that we set in constructor of logger */
+                var key = options.EncryptingOptions.Key;
+                string data;
+                string decryptedData;
 
-            using (StreamWriter writer = new StreamWriter(filePath, false))
-            {
-                writer.WriteLine(decryptedData);
-            }
+                using (StreamReader reader = new StreamReader(filePath))
+                {
+                    data = reader.ReadToEnd();
+                    decryptedData = AesOperation.DecryptString(key, data);
+                }
+
+                using (StreamWriter writer = new StreamWriter(filePath, false))
+                {
+                    writer.WriteLine(decryptedData);
+                }
+            });
         }
 
-        private void CompressAndMoveToTargetDir(string fileName, string filePath)
+        private async Task CompressAndMoveToTargetDir(string fileName, string filePath)
         {
-            string currPath = options.PathsOptions.TargetDirectory;
-            currPath += @"\";
-
-            int letterPos; 
-
-            for (letterPos = 0; fileName[letterPos] != '_'; ++letterPos);
-            letterPos++;
-
-            string year = fileName.Substring(letterPos, 4);    
-            string month = fileName.Substring(letterPos+5, 2);      
-            string day = fileName.Substring(letterPos+8, 2);    
-            string hour = fileName.Substring(letterPos+11, 2);        
-            string minute = fileName.Substring(letterPos+14, 2);      
-            string second = fileName.Substring(letterPos+17, 2);      
-
-            string[] data = { year, month, day, hour, minute, second };
-
-            foreach (string period in data)
+            await Task.Run(() =>
             {
-                currPath += period;
-
-                DirectoryInfo dirInfo = new DirectoryInfo(currPath);
-
-                if (!dirInfo.Exists)
-                    dirInfo.Create();
-
-
+                string currPath = options.PathsOptions.TargetDirectory;
                 currPath += @"\";
-            }
 
-            currPath += fileName;
+                int letterPos;
 
-            // now currPath looks: D:\Git\Labs\third_sem\CSharp\lab2\TargetDirectory\...\blablabla.txt
-            // we need to change it so that the end of path will have .gz format
+                for (letterPos = 0; fileName[letterPos] != '_'; ++letterPos) ;
+                letterPos++;
 
-            currPath = GetGzFormat(currPath);
+                string year = fileName.Substring(letterPos, 4);
+                string month = fileName.Substring(letterPos + 5, 2);
+                string day = fileName.Substring(letterPos + 8, 2);
+                string hour = fileName.Substring(letterPos + 11, 2);
+                string minute = fileName.Substring(letterPos + 14, 2);
+                string second = fileName.Substring(letterPos + 17, 2);
 
-            // now currPath is (...)\blablabla.gz
+                string[] data = { year, month, day, hour, minute, second };
 
-            FileOperations.FileOperations.CompressFile(filePath, currPath);
+                foreach (string period in data)
+                {
+                    currPath += period;
+
+                    DirectoryInfo dirInfo = new DirectoryInfo(currPath);
+
+                    if (!dirInfo.Exists)
+                        dirInfo.Create();
+
+
+                    currPath += @"\";
+                }
+
+                currPath += fileName;
+
+                // now currPath looks: D:\Git\Labs\third_sem\CSharp\lab2\TargetDirectory\...\blablabla.txt
+                // we need to change it so that the end of path will have .gz format
+
+                currPath = GetGzFormat(currPath);
+
+                // now currPath is (...)\blablabla.gz
+
+                FileOperations.FileOperations.CompressFile(filePath, currPath);
+            });
         }
 
         /* function searchs for directory that contains file in target directory */
@@ -253,21 +264,24 @@ namespace FileManagerService
                 return "error";
         }
 
-        private void DecompressFileToTargetDir(string fileName, string filePath)
+        private async Task DecompressFileToTargetDir(string fileName, string filePath)
         {
-            /* fileName is file.txt We need to change it to file.gz, because it is comressed in archieve */
-            string gzFileName = GetGzFormat(fileName);
+            await Task.Run(() =>
+            {
+                /* fileName is file.txt We need to change it to file.gz, because it is comressed in archieve */
+                string gzFileName = GetGzFormat(fileName);
 
-            /* now we need to decompress archieve. But before this, we need to get path to archieve, that has .gz format in TargetDirectory */
-            string targetPathOfFileDir = GetPathOfFileInTargetDir(gzFileName);
+                /* now we need to decompress archieve. But before this, we need to get path to archieve, that has .gz format in TargetDirectory */
+                string targetPathOfFileDir =  GetPathOfFileInTargetDir(gzFileName);
 
-            string compressedFile = targetPathOfFileDir;
-            compressedFile += gzFileName;
+                string compressedFile = targetPathOfFileDir;
+                compressedFile += gzFileName;
 
-            string decompressedFile = targetPathOfFileDir;
-            decompressedFile += fileName;
+                string decompressedFile = targetPathOfFileDir;
+                decompressedFile += fileName;
 
-            FileOperations.FileOperations.DecompressFile(compressedFile, decompressedFile);
+                FileOperations.FileOperations.DecompressFile(compressedFile, decompressedFile);
+            });
         }
     }
 }
