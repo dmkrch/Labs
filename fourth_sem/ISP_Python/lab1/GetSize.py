@@ -11,11 +11,11 @@ def convert_bytes(num):
 
 def file_size(file_path):
     if os.path.isfile(file_path):
-        print("file")
+        print("This is file")
         file_info = os.stat(file_path)
         return convert_bytes(file_info.st_size)
     elif os.path.isdir(file_path):
-        print("dir")
+        print("This is directory")
         file_info = os.stat(file_path)
         return convert_bytes(file_info.st_size)
 
@@ -24,7 +24,7 @@ def file_size(file_path):
 def main():
     if len(sys.argv) > 1:
         file_path = sys.argv[1]
-        print(file_size(file_path))
+        print("Size = ", file_size(file_path))
     else:
         print("specify the path to file!")
 
