@@ -1,7 +1,6 @@
 import os
 import sys
 import time
-from flask import Flask
 
 
 def convert_bytes(num):
