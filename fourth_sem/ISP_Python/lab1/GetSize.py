@@ -1,5 +1,7 @@
 import os
 import sys
+import time
+from flask import Flask
 
 
 def convert_bytes(num):
@@ -26,6 +28,6 @@ def main():
         file_path = sys.argv[1]
         print("Size = ", file_size(file_path))
     else:
-        print("specify the path to file!")
+        print("Specify the path to file!")
 
 main()
