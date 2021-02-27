@@ -1,6 +1,5 @@
 import os
 import sys
-import time
 
 
 def convert_bytes(num):
@@ -26,7 +25,7 @@ def main():
     if len(sys.argv) > 1:
         file_path = sys.argv[1]
         print("Size = ", file_size(file_path))
-    else:
+    else: 
         print("Specify the path to file!")
 
 main()

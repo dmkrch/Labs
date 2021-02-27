@@ -1,8 +1,8 @@
-FROM python:latest
+FROM python:3.8-alpine
 
 RUN mkdir -p /usr/src/app/
 WORKDIR /usr/src/app/
 
 COPY . /usr/src/app/
 
-CMD ["python", "GetSize.py"]
+ENTRYPOINT [ "python", "GetSize.py" ]
