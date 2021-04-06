@@ -1,6 +1,6 @@
 import sys
 
-sys.path.insert(0, 'Parsers')
+sys.path.insert(0, 'Serializers')
 
 from yaml import YamlSerializer
 from pickle import PickleSerializer
