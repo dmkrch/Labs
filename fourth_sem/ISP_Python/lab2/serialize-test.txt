@@ -1,1 +1,0 @@
-{"Name": "Dmitry", "Age": 25}

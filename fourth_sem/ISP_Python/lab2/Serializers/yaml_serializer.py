@@ -1,5 +1,11 @@
 from serializer import Serializer
 
 class YamlSerializer(Serializer):
-    def greet(cls):
-        print("hello from yaml")
+    # function that parses py-obj to json-str
+    def parse(obj):
+        return json.dumps(obj)
+
+
+    # function that unparses json-str to py-obj
+    def unparse(str_data):
+        return json.loads(str_data)

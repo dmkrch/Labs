@@ -2,7 +2,10 @@ from factory import Factory
 import sys
 sys.path.insert(0, 'Serializers')
 from serializer import Serializer
+import pickle
 
+
+age1 = 50
 
 class Human():
     def __init__(self, age, gender):
@@ -17,6 +20,10 @@ class Human():
 
     def __str__(self):
         return (f"{self._age}, {self._gender}")
+
+class TestClass():
+    age = 26
+    strr = "Hellooo"    
 
 
 
@@ -39,19 +46,17 @@ class Student():
     def print_st_info(self):
         print(f"name: {self._name}, date: {self._date}, arr: {self._arr}, human: {self._human}")
 
+def SomeFunction(age):
+    print(age)
+    print("\n")
+    print(age1)
+
+
 
 hm1 = Human(20, "Male")
 st1 = Student("Vasya Pupkin", "01.02.2000", hm1)
-
 hm2 = { "Name": "Dmitry", "Age": 25}
 
+
+# --------------------------- SERIALIZE TEST ------------------------------
 serializer = Factory.create_serializer("json")
-
-# # str_obj = serializer.serialize(hm2, "serialize-test.txt")
-# hm5 = serializer.deserialize("", "serialize-test.txt")
-# print(hm5)
-
-str1 = hm2
-print(str1)
-
-hm5 = serializer.deserialize(str1)

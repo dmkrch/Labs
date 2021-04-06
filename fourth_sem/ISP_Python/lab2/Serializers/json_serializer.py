@@ -1,5 +1,4 @@
 from serializer import Serializer
-
 import json
 
 class JsonSerializer(Serializer):
