@@ -1,7 +1,8 @@
+from factory import Factory
 import sys
 sys.path.insert(0, 'Serializers')
 from serializer import Serializer
-from factory import Factory
+
 
 class Human():
     def __init__(self, age, gender):
@@ -40,10 +41,17 @@ class Student():
 
 
 hm1 = Human(20, "Male")
-st1 = Student("Vasya Pupkin", "01.02.1000", hm1)
+st1 = Student("Vasya Pupkin", "01.02.2000", hm1)
+
+hm2 = { "Name": "Dmitry", "Age": 25}
 
 serializer = Factory.create_serializer("json")
-serializer.greet()
 
-str_obj = serializer.serialize("", "serialize-test.txt")
-print(str_obj)
+# # str_obj = serializer.serialize(hm2, "serialize-test.txt")
+# hm5 = serializer.deserialize("", "serialize-test.txt")
+# print(hm5)
+
+str1 = hm2
+print(str1)
+
+hm5 = serializer.deserialize(str1)

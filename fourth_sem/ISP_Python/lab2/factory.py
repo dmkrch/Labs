@@ -1,11 +1,10 @@
 import sys
-
 sys.path.insert(0, 'Serializers')
 
-from yaml import YamlSerializer
-from pickle import PickleSerializer
-from json import JsonSerializer
-from toml import TomlSerializer
+from yaml_serializer import YamlSerializer
+from pickle_serializer import PickleSerializer
+from json_serializer import JsonSerializer
+from toml_serializer import TomlSerializer
 
 class Factory():
     @staticmethod
@@ -20,8 +19,3 @@ class Factory():
             return TomlSerializer()
         else:
             raise Exception("No such parsers")
-        
-
-    @staticmethod
-    def do():
-        print("asfdsdaf")
