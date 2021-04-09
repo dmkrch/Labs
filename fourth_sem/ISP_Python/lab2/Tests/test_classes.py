@@ -1,4 +1,7 @@
-class Human():
+import inspect
+
+
+class SimpleClass():
     def __init__(self, age, gender):
         self._age = age
         self._gender = gender
@@ -13,7 +16,7 @@ class Human():
         return (f"{self._age}, {self._gender}")
 
 
-class Student():
+class ComplicatedClass():
     def __init__(self, name, date, hm):
         self._name = name
         self._date = date
@@ -32,13 +35,17 @@ class Student():
     def print_st_info(self):
         print(f"name: {self._name}, date: {self._date}, arr: {self._arr}, human: {self._human}")
 
-def SomeFunction(age):
+def SimpleFunction(age):
     print(age)
     print("\n")
-    print(age1)
 
-class TestClass():
-    age = 26
-    strr = "Hellooo"    
+def RecursiveFunction(n):
+    n = n-1
+    if (n == 0):
+        return
+    RecursiveFunction(n)
 
-age1 = 50
+lamda_func = lambda num: num % 2
+
+hm1 = SimpleClass(20, "Male")
+st1 = ComplicatedClass("Vasya Pupkin", "01.02.2000", SimpleClass(25, "Male"))

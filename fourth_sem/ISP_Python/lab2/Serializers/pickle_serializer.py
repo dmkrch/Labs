@@ -1,4 +1,4 @@
-from serializer import Serializer
+from Serializers.serializer import Serializer
 import pickle
 import codecs
 
@@ -6,11 +6,11 @@ class PickleSerializer(Serializer):
 
     # function that parses py-obj to pickle-str
     def parse(obj):
-        pickled = codecs.encode(pickle.dumps(obj), "base64").decode()
-        return pickled
+        pickle_str = codecs.encode(pickle.dumps(obj), "base64").decode()
+        return pickle_str
 
 
-    # function that unparses json-str to py-obj
-    def unparse(str_data):
-        unpickled = pickle.loads(codecs.decode(str_data.encode(), "base64"))
-        return unpickled
+    # function that unparses pickle-str to py-obj
+    def unparse(pickle_str):
+        py_obj = pickle.loads(codecs.decode(pickle_str.encode(), "base64"))
+        return py_obj

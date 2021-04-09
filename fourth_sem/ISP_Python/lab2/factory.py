@@ -1,10 +1,7 @@
-import sys
-sys.path.insert(0, 'Serializers')
-
-from yaml_serializer import YamlSerializer
-from pickle_serializer import PickleSerializer
-from json_serializer import JsonSerializer
-from toml_serializer import TomlSerializer
+from Serializers.yaml_serializer import YamlSerializer
+from Serializers.pickle_serializer import PickleSerializer
+from Serializers.json_serializer import JsonSerializer
+from Serializers.toml_serializer import TomlSerializer
 
 class Factory():
     @staticmethod
