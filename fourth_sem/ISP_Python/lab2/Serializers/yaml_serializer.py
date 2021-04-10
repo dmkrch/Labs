@@ -1,12 +1,22 @@
 from Serializers.serializer import Serializer
+from Serializers.json_serializer import *
 import yaml
 
 class YamlSerializer(Serializer):
 
     # function that parses py-obj to json-str
     def parse(obj):
-        return yaml.dump(obj)
+        
+        # getting dictionary
+        dict_obj = JsonSerializer.serialize_object(obj)
 
-    # function that unparses json-str to py-obj
+        #yaml dump of dictionary to yaml-object
+        return yaml.dump(dict_obj)
+
+    # function that unparses yaml-obj to py-obj
     def unparse(str_data):
-        return yaml.load(str_data, Loader=yaml.FullLoader)
+
+        # getting dictionary
+        dict_obj = yaml.load(str_data, Loader=yaml.FullLoader)
+
+        return JsonSerializer.deserialize_str(dict_obj)
