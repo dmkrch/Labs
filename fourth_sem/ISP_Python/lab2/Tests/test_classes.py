@@ -55,3 +55,5 @@ st1 = ComplicatedClass("Vasya Pupkin", "01.02.2000", SimpleClass(25, "Male"))
 
 tuple_one = (10, 2.13, "square", 89, 'C')
 list_one = [66.25, 333, 333, 1, 1234.5]
+
+add_one = lambda x: x + 1

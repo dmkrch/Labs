@@ -2,6 +2,8 @@ from Serializers.serializer import Serializer
 from factory import Factory
 import argparse
 from Tests.test_classes import *
+import cloudpickle
+import pickle
 
 def main():
     # ----------------------------- ARGPARSE ----------------------------
@@ -25,5 +27,19 @@ def main():
     new_file_name = str_parts[0] + "." + new_format_type
     serializer.serialize(py_obj, new_file_name)
 
-if __name__ == '__main__':
-    exit(main())
+# if __name__ == '__main__':
+#     exit(main())
+
+# add_one = lambda x: x + 1
+
+# s = Factory.create_serializer("json")
+# json_str = s.serialize(lambda x: x + 1, "data1.json")
+# lambda_new = s.deserialize(json_str,)
+
+# print(lambda_new(5))
+
+s = Factory.create_serializer("json")
+new_class = s.deserialize("", "test_class.json")
+obj1 = new_class(25, "Male")
+
+print(obj1.get_age())

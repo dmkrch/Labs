@@ -1,6 +1,7 @@
 import inspect
 import pickle
 import base64
+import cloudpickle
 
 class Serializer():
     # ----------------------- SERIALIZATION ----------------------
@@ -112,6 +113,11 @@ class Serializer():
     @classmethod
     def get_base64_pickle_object(cls, py_obj):
         try:
+            if (cls.is_lambda_function(py_obj)):
+                pickle_str = cloudpickle.dumps(py_obj)
+                b64 = base64.b64encode(pickle_str).decode('ascii')
+                return b64
+
             return base64.b64encode(pickle.dumps(py_obj)).decode('ascii')
         except TypeError:
             return None

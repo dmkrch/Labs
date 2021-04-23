@@ -45,6 +45,22 @@ class JsonSerializer(Serializer):
         except TypeError:
             return False
 
+    @classmethod
+    def is_lambda_function(cls, py_obj):
+        parts = py_obj.__name__.split('<')
+        name_str = parts[1]
+        parts = name_str.split('>')
+        name_str = parts[0]     
+
+        if name_str == "lambda":
+            return True
+        parts = name_str.split('>')
+        name_str = parts[0]     
+
+        if name_str == "lambda":
+            return True
+        else:
+            return False
 
     @classmethod
     def deserialize_str(cls, json_str):

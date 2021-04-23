@@ -2,10 +2,10 @@ import sys
 sys.path.append('../')
 
 import unittest
-from Serializers.json_serializer import JsonSerializer
+from Serializers.yaml_serializer import YamlSerializer
 from test_classes import *
 
-serializer = JsonSerializer()
+serializer = YamlSerializer()
 
 class TestJsonSerialization(unittest.TestCase):
     # testing whether simple function is correct
@@ -63,7 +63,7 @@ class TestJsonSerialization(unittest.TestCase):
     def test_list(self):
         list_test = serializer.serialize(list_one)
         list_obj = serializer.deserialize(list_test)
-        self.assertEqual(list_obj, list_one)
+        self.assertEqual(list_obj, list_one)    
 
 
 
