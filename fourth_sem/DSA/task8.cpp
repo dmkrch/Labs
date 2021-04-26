@@ -25,4 +25,4 @@ int main()
         std::cout << length-1;
     
     return 0;
-}
+}    
