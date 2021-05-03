@@ -10,9 +10,14 @@ int main()
 	std::cin >> N;
 
     std::vector<long long> A;
+	A.push_back(0);
 
 	for (long long i = 0; i < N; i++)
-		std::cin >> A[i+1];
+	{
+		int numb;
+		std::cin >> numb;
+		A.push_back(numb);
+	}
 
 	for (long long i = 0; i < N; i++)
 		if (A[i+1] > max)
