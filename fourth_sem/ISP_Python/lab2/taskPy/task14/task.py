@@ -1,4 +1,5 @@
 import sys
+import re
 sys.path.append('../..')
 
 from factory import Factory
@@ -22,9 +23,6 @@ class UniqueObjectStorage():
     def print(self):
             for elem in self.objects_set:
                 print(elem)
-
-    def grep(self, regexp):
-        pass
 
     def save(self):
         s = Factory.create_serializer("json")

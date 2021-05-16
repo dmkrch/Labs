@@ -15,6 +15,9 @@ def main():
     file_path = getattr(args, 'path')
     new_format_type = getattr(args, 'format')
 
+    print(file_path)
+    print(new_format_type)
+
     # --------------------------- UTILITY WORK ------------------------------
 
     str_parts = file_path.split(".")
@@ -27,8 +30,8 @@ def main():
     new_file_name = str_parts[0] + "." + new_format_type
     serializer.serialize(py_obj, new_file_name)
 
-# if __name__ == '__main__':
-#     exit(main())
+if __name__ == '__main__':
+    exit(main())
 
 # add_one = lambda x: x + 1
 
@@ -38,8 +41,8 @@ def main():
 
 # print(lambda_new(5))
 
-s = Factory.create_serializer("json")
-new_class = s.deserialize("", "test_class.json")
-obj1 = new_class(25, "Male")
+# s = Factory.create_serializer("json")
+# new_class = s.deserialize("", "test_class.json")
+# obj1 = new_class(25, "Male")
 
-print(obj1.get_age())
+# print(obj1.get_age())
