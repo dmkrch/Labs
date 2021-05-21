@@ -37,6 +37,11 @@ class TagDelete(ObjectDeleteMixin, View):
     template = 'blog/tag_delete.html'
     redirect_url = 'tags_list_url'
 
+class PostDelete(ObjectDeleteMixin, View):
+    model = Post
+    template = 'blog/post_delete.html'
+    redirect_url = 'posts_list_url'
+
 def posts_list(request):
     posts = Post.objects.all()
     return render(request, 'blog/index.html', context={'posts': posts})
