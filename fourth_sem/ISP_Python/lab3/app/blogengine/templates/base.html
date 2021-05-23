@@ -1,4 +1,13 @@
 {% load static %}
+
+<style>
+.hello-msg {
+    font-size: 18px;
+    color: #310062;
+    margin-right: 20px;
+}
+</style>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,8 +41,15 @@
         <li class="nav-item">
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
         </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{% url 'login_url' %}">Authorization</a>
+          </li>
+          <li>
+              <a class="nav-link" href="{% url 'register_url' %}">Registration</a>
+          </li>
       </ul>
-
+        <span class="hello-msg">Hello, {{ request.user }}</span>
+        <span><a class="hello-msg" href="{% url 'logout_url' %}">Logout</a></span>
 
       <form class="d-flex" action="{% url 'posts_list_url' %}">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search">

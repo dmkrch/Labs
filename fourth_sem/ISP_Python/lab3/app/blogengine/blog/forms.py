@@ -1,8 +1,10 @@
 from django import forms
 from django.core.exceptions import ValidationError
-
+from django.contrib.auth.models import User
 from blog.models import Tag, Post
+from django.contrib.auth.forms import UserCreationForm
 
+import re
 
 class TagForm(forms.ModelForm):
     class Meta:
@@ -35,9 +37,19 @@ class PostForm(forms.ModelForm):
             'tags': forms.SelectMultiple(attrs={'class': 'form-control'}),
         }
 
-        def clean_slug(self):
-            new_slug = self.cleaned_data['slug'].lower()
+    def clean_slug(self):
+        new_slug = self.cleaned_data['slug'].lower()
 
-            if new_slug == 'create':
-                raise ValidationError('Slug may not be "Create"')
-            return new_slug
+        if new_slug == 'create':
+            raise ValidationError('Slug may not be "Create"')
+        return new_slug
+
+
+def check(email):
+    regex = '^(\w|\.|\_|\-)+[@](\w|\_|\-|\.)+[.]\w{2,3}$'
+    return re.search(regex, email)
+
+class CreateUserForm(UserCreationForm):
+        class Meta:
+            model = User
+            fields = ['username', 'email', 'password1', 'password2']
