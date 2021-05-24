@@ -1,12 +1,12 @@
 {% load static %}
 
-<style>
-.hello-msg {
-    font-size: 18px;
-    color: #310062;
-    margin-right: 20px;
-}
-</style>
+<!--<style>-->
+<!--.hello-msg {-->
+<!--    font-size: 18px;-->
+<!--    color: #310062;-->
+<!--    margin-right: 20px;-->
+<!--}-->
+<!--</style>-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -44,13 +44,20 @@
           <li class="nav-item">
               <a class="nav-link" href="{% url 'login_url' %}">Authorization</a>
           </li>
-          <li>
+          <li class="nav-item">
               <a class="nav-link" href="{% url 'register_url' %}">Registration</a>
           </li>
-      </ul>
-        <span class="hello-msg">Hello, {{ request.user }}</span>
-        <span><a class="hello-msg" href="{% url 'logout_url' %}">Logout</a></span>
+          <li class="nav-item">
+                {% if request.user.is_authenticated %}
+              <span class="navbar text">Hello,
+                  <span class="badge badge-danger">
+                    <a style="font-size:20px;" href="#">{{ request.user.username }}</a>
+                  </span> |  <a href="{% url 'logout_url' %}">Logout</a>
+              </span>
+                {% endif %}
+          </li>
 
+      </ul>
       <form class="d-flex" action="{% url 'posts_list_url' %}">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search">
         <button class="btn btn-outline-success" type="submit">Search</button>

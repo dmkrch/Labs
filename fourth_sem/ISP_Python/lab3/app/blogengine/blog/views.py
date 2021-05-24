@@ -91,7 +91,7 @@ class LoginView(View):
 class LogoutView(View):
     def get(self, request):
         logout(request)
-        return redirect('login_url')
+        return redirect('posts_list_url')
 
     def post(self, request):
         pass
@@ -114,3 +114,10 @@ class RegisterView(View):
             messages.success(request, 'Account was created for ' + username)
             return redirect(reverse('login_url'))
         return render(request, 'blog/register.html', context={'form': form})
+
+class ProfileView(View):
+    def get(self, request):
+        pass
+
+    def post(self, request):
+        pass

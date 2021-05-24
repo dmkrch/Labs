@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse
+from .models import Post
 
 class ObjectDetailMixin:
     model = None
@@ -22,8 +23,15 @@ class ObjectCreateMixin:
         bound_form = self.model_form(request.POST)
 
         if bound_form.is_valid():
-            new_obj = bound_form.save()
-            return redirect(new_obj)
+            post = Post()
+            post.user = request.user
+            post.title = bound_form.cleaned_data['title']
+            post.slug = bound_form.cleaned_data['slug']
+            post.body = bound_form.cleaned_data['body']
+            post.save()
+            post.tags.set(bound_form.cleaned_data['tags'])
+
+            return redirect(post)
         return render(request, self.template, context={'form': bound_form})
 
 
