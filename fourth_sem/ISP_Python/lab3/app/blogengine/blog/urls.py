@@ -14,5 +14,6 @@ urlpatterns = [
     path('tag/<str:slug>/delete/', TagDelete.as_view(), name='tag_delete_url'),
     path('login/', LoginView.as_view(), name='login_url'),
     path('register/', RegisterView.as_view(), name='register_url'),
-    path('logout/', LogoutView.as_view(), name='logout_url')
+    path('logout/', LogoutView.as_view(), name='logout_url'),
+    path('profile/', ProfileView.as_view(), name='profile_url')
 ]

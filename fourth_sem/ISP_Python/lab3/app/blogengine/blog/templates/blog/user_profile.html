@@ -5,8 +5,9 @@
 
 
 {% block content %}
-    <h1 class="mt-5">Posts with "{{ tag.title|title }}" tag:</h1>
-    {% for post in tag.posts.all %}
+    <h1 class="mb-5">Posts:</h1>
+    <a href="{% url 'post_create_url' %}" class="btn btn-light mb-5">Create new post</a>
+    {% for post in posts %}
         {% include 'blog/includes/post_card_template.html' %}
     {% endfor %}
 {% endblock %}

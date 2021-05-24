@@ -117,7 +117,10 @@ class RegisterView(View):
 
 class ProfileView(View):
     def get(self, request):
-        pass
+        curr_user = request.user
+        posts = Post.objects.filter(user=curr_user)
+
+        return render(request, 'blog/user_profile.html', context={'posts': posts})
 
     def post(self, request):
         pass
