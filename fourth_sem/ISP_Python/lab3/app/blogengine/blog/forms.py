@@ -4,7 +4,6 @@ from django.contrib.auth.models import User
 from blog.models import Tag, Post
 from django.contrib.auth.forms import UserCreationForm
 
-import re
 
 class TagForm(forms.ModelForm):
     class Meta:
@@ -44,10 +43,6 @@ class PostForm(forms.ModelForm):
             raise ValidationError('Slug may not be "Create"')
         return new_slug
 
-
-def check(email):
-    regex = '^(\w|\.|\_|\-)+[@](\w|\_|\-|\.)+[.]\w{2,3}$'
-    return re.search(regex, email)
 
 class CreateUserForm(UserCreationForm):
         class Meta:
