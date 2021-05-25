@@ -19,11 +19,13 @@ class TagDetail(ObjectDetailMixin, View):
     template = 'blog/tag_detail.html'
 
 class PostCreate(LoginRequiredMixin, ObjectCreateMixin, View):
+    model = Post
     model_form = PostForm
     template = 'blog/post_create.html'
     raise_exception = True
 
 class TagCreate(LoginRequiredMixin, ObjectCreateMixin, View):
+    model = Tag
     model_form = TagForm
     template = 'blog/tag_create.html'
     raise_exception = True

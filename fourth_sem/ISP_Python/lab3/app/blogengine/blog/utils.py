@@ -12,6 +12,7 @@ class ObjectDetailMixin:
                                                        True})
 
 class ObjectCreateMixin:
+    model = None
     model_form = None
     template = None
 
@@ -20,18 +21,24 @@ class ObjectCreateMixin:
         return render(request, self.template, context={'form': form})
 
     def post(self, request):
+        print("entered first")
         bound_form = self.model_form(request.POST)
 
         if bound_form.is_valid():
-            post = Post()
-            post.user = request.user
-            post.title = bound_form.cleaned_data['title']
-            post.slug = bound_form.cleaned_data['slug']
-            post.body = bound_form.cleaned_data['body']
-            post.save()
-            post.tags.set(bound_form.cleaned_data['tags'])
+            if self.model == Post:
+                print('post model entered')
+                post = Post()
+                post.user = request.user
+                post.title = bound_form.cleaned_data['title']
+                post.slug = bound_form.cleaned_data['slug']
+                post.body = bound_form.cleaned_data['body']
+                post.save()
+                post.tags.set(bound_form.cleaned_data['tags'])
 
-            return redirect(post)
+                return redirect(post)
+            else:
+                new_obj = bound_form.save()
+                return redirect(new_obj)
         return render(request, self.template, context={'form': bound_form})
 
 
