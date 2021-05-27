@@ -1,20 +1,19 @@
-from itertools import permutations
-numb = input()
-if int(numb) < 0:
-    print(-1)
-    quit()
-
-#sorted list of numbers by permutations
-lst = sorted(map(int, map(''.join, list(permutations(numb)))))
+import itertools
  
-numb = int(numb)
-flag = True
+def solveTask(num):
+    arr = list(map(int, str(num)))
+    arr_list = list(itertools.permutations(arr))
+    arr_list.sort()
+    
+    for lst in arr_list:
+        test = int("".join(map(str, lst)))
+        if test > num:
+            return test
+    return -1
 
-for item in lst:
-    if item > numb:
-        print(item)
-        flag = False
-        break
+x = int(input())
 
-if flag: 
+if x < 10:
     print(-1)
+else:
+    print(solveTask(x))
