@@ -1,12 +1,18 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse
 from .models import Post
+import logging.config
+
+logger = logging.getLogger(__name__)
+
+
 
 class ObjectDetailMixin:
     model = None
     template = None
 
     def get(self, request, slug):
+        logger.info('GET: {} detail mixin entered'.format(self.model.__name__))
         obj = get_object_or_404(self.model, slug__iexact=slug)
         return render(request, self.template, context={self.model.__name__.lower(): obj, 'admin_object': obj, 'detail':
                                                        True})
@@ -17,16 +23,16 @@ class ObjectCreateMixin:
     template = None
 
     def get(self, request):
+        logger.info('GET: {} create mixin entered'.format(self.model.__name__))
         form = self.model_form()
         return render(request, self.template, context={'form': form})
 
     def post(self, request):
-        print("entered first")
+        logger.info('POST: {} create mixin entered'.format(self.model.__name__))
         bound_form = self.model_form(request.POST)
 
         if bound_form.is_valid():
             if self.model == Post:
-                print('post model entered')
                 post = Post()
                 post.user = request.user
                 post.title = bound_form.cleaned_data['title']
@@ -48,6 +54,7 @@ class ObjectUpdateMixin:
     template = None
 
     def get(self, request, slug):
+        logger.info('GET: {} update mixin entered'.format(self.model.__name__))
         obj = self.model.objects.get(slug__iexact=slug)
         if obj.user == request.user or request.user.is_superuser:
             bound_form = self.model_form(instance=obj)
@@ -57,6 +64,7 @@ class ObjectUpdateMixin:
 
 
     def post(self, request, slug):
+        logger.info('POST: {} update mixin entered'.format(self.model.__name__))
         obj = self.model.objects.get(slug__iexact=slug)
         bound_form = self.model_form(request.POST, instance=obj)
 
@@ -72,6 +80,7 @@ class ObjectDeleteMixin:
     redirect_url = None
 
     def get(self, request, slug):
+        logger.info('GET: {} delete mixin entered'.format(self.model.__name__))
         obj = self.model.objects.get(slug__iexact=slug)
         if obj.user == request.user or request.user.is_superuser:
             return render(request, self.template, context={self.model.__name__.lower(): obj})
@@ -79,6 +88,7 @@ class ObjectDeleteMixin:
             return redirect(obj)
 
     def post(self, request, slug):
+        logger.info('POST: {} delete mixin entered'.format(self.model.__name__))
         obj = self.model.objects.get(slug__iexact=slug)
         obj.delete()
         return redirect(reverse(self.redirect_url))
