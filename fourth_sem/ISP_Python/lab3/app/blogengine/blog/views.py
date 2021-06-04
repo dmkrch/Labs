@@ -1,4 +1,6 @@
+import asyncio
 from django.shortcuts import render, redirect
+from django.utils.decorators import classonlymethod
 from django.views.generic import View
 from django.urls import reverse
 from .models import Post, Tag
@@ -7,7 +9,7 @@ from .forms import TagForm, PostForm, CreateUserForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib import messages
-from django.contrib.auth.decorators import login_required
+from asgiref.sync import sync_to_async
 
 class PostDetail(ObjectDetailMixin, View):
     model = Post
@@ -53,6 +55,8 @@ class PostDelete(LoginRequiredMixin, ObjectDeleteMixin, View):
     redirect_url = 'posts_list_url'
     raise_exception = True
 
+
+@sync_to_async
 def posts_list(request):
     search_query = request.GET.get('search', '')
 
@@ -63,18 +67,27 @@ def posts_list(request):
 
     return render(request, 'blog/index.html', context={'posts': posts})
 
+@sync_to_async
 def tags_list(request):
     tags = Tag.objects.all()
     return render(request, 'blog/tags_list.html', context={'tags': tags})
 
 
 class LoginView(View):
+    @classonlymethod
+    def as_view(cls, **initkwargs):
+        view = super().as_view(**initkwargs)
+        view._is_coroutine = asyncio.coroutines._is_coroutine
+        return view
+
+    @sync_to_async
     def get(self, request):
         if request.user.is_authenticated:
             return redirect('posts_list_url')
         context = {}
         return render(request, 'blog/login.html', context)
 
+    @sync_to_async
     def post(self, request):
         username = request.POST.get('username')
         password = request.POST.get('password')
@@ -90,15 +103,30 @@ class LoginView(View):
         return render(request, 'blog/login.html', context)
 
 class LogoutView(View):
+    @classonlymethod
+    def as_view(cls, **initkwargs):
+        view = super().as_view(**initkwargs)
+        view._is_coroutine = asyncio.coroutines._is_coroutine
+        return view
+
+    @sync_to_async
     def get(self, request):
         logout(request)
         return redirect('posts_list_url')
 
+    @sync_to_async
     def post(self, request):
         pass
 
 
 class RegisterView(View):
+    @classonlymethod
+    def as_view(cls, **initkwargs):
+        view = super().as_view(**initkwargs)
+        view._is_coroutine = asyncio.coroutines._is_coroutine
+        return view
+
+    @sync_to_async
     def get(self, request):
         if request.user.is_authenticated:
             return redirect('posts_list_url')
@@ -107,6 +135,7 @@ class RegisterView(View):
         context = {'form': form}
         return render(request, 'blog/register.html', context)
 
+    @sync_to_async
     def post(self, request):
         form = CreateUserForm(request.POST)
         if form.is_valid():
@@ -116,12 +145,21 @@ class RegisterView(View):
             return redirect(reverse('login_url'))
         return render(request, 'blog/register.html', context={'form': form})
 
+
 class ProfileView(View):
+    @classonlymethod
+    def as_view(cls, **initkwargs):
+        view = super().as_view(**initkwargs)
+        view._is_coroutine = asyncio.coroutines._is_coroutine
+        return view
+
+    @sync_to_async
     def get(self, request):
         curr_user = request.user
         posts = Post.objects.filter(user=curr_user)
 
         return render(request, 'blog/user_profile.html', context={'posts': posts})
 
+    @sync_to_async
     def post(self, request):
         pass
