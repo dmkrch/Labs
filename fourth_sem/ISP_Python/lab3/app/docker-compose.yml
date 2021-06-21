@@ -9,15 +9,3 @@ services:
       - 8000:8000
     env_file:
       - ./.env.dev
-    depends_on:
-      - db
-  db:
-    image: postgres:12.0-alpine
-    volumes:
-      - postgres_data:/var/lib/postgresql/data/
-    environment:
-      - POSTGRES_DB=ecom_db
-      - POSTGRES_USER=ecomuser
-      - POSTGRES_PASSWORD=devpass
-volumes:
-  postgres_data:
