@@ -1,17 +1,17 @@
-def memoize(func):
+def cached(func):
     cache = dict()
 
-    def memoized_func(*args):
+    def wrapper(*args):
         if args in cache:
             return cache[args]
         result = func(*args)
         cache[args] = result
         return result
 
-    return memoized_func
+    return wrapper
 
 
-@memoize
+@cached
 def fib(n):
     if n in (0, 1):
         return n
