@@ -56,7 +56,7 @@ class PostDelete(LoginRequiredMixin, ObjectDeleteMixin, View):
     raise_exception = True
 
 
-@sync_to_async
+
 def posts_list(request):
     search_query = request.GET.get('search', '')
 
