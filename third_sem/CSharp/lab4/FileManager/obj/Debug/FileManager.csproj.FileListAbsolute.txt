@@ -1,0 +1,2 @@
+D:\Programming\Labs\third_sem\CSharp\lab4\FileManager\obj\Debug\FileManager.csprojAssemblyReference.cache
+D:\Programming\Labs\third_sem\CSharp\lab4\FileManager\obj\Debug\FileManager.csproj.CoreCompileInputs.cache

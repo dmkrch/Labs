@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.025,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.cpp=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Main.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.847,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.cpp=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\HashTable.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.373,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Project1.cbproj=D:\Prog\lab_2_sem\C++\lab7\Project1.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.757,=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.863,=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.955,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.cpp=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Stack.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.891,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Main.cpp=D:\Prog\lab_2_sem\C++\lab7\Main.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.176,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Stack.cpp=D:\Prog\lab_2_sem\C++\lab7\Stack.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.025,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Main.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.676,=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.606,=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.648,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Project1PCH1.h=D:\Prog\lab_2_sem\C++\lab7\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.002,=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.847,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.h=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\HashTable.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.025,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.h=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Main.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.955,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.h=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Stack.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.891,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Main.h=D:\Prog\lab_2_sem\C++\lab7\Main.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.891,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Main.dfm=D:\Prog\lab_2_sem\C++\lab7\Main.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.705,D:\Prog\lab_2_sem\C++\lab7\TaskHashTable.h=D:\Prog\lab_2_sem\C++\lab7\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.567,=D:\Prog\lab_2_sem\C++\lab7\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.056,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\HashTable.cpp=D:\Prog\lab_2_sem\C++\lab7\HashTable.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.093,=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.056,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\HashTable.h=D:\Prog\lab_2_sem\C++\lab7\HashTable.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.705,D:\Prog\lab_2_sem\C++\lab7\TaskHashTable.cpp=D:\Prog\lab_2_sem\C++\lab7\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.176,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Stack.h=D:\Prog\lab_2_sem\C++\lab7\Stack.h</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Project1.cpp"/>
+    <File Path="Project1PCH1.h"/>
+    <File Path="Main.cpp"/>
+    <File Path="Main.cpp"/>
+    <File Path="Main.dfm"/>
+    <File Path="Main.h"/>
+    <File Path="Stack.cpp"/>
+    <File Path="Stack.cpp"/>
+    <File Path="Stack.h"/>
+    <File Path="HashTable.cpp"/>
+    <File Path="HashTable.cpp"/>
+    <File Path="HashTable.h"/>
+    <File Path="TaskHashTable.cpp"/>
+    <File Path="TaskHashTable.cpp"/>
+    <File Path="TaskHashTable.h"/>
+  </ProjectSortOrder>
+</BorlandProject>

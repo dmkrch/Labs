@@ -1,0 +1,82 @@
+//---------------------------------------------------------------------------
+
+#ifndef TaskTreeH
+#define TaskTreeH
+//---------------------------------------------------------------------------
+#endif
+
+#include "Tree.h"
+#include <vcl.h>
+
+
+
+template <typename T>
+class TaskTree : public Tree<T>
+{
+public:
+	TaskTree() : Tree<T>()
+	{
+
+	}
+
+	void Show_tree(TTreeView *TreeView)
+	{
+		int index = 0;
+		TreeView->Items->Clear();
+		if(root)
+		{
+			String add_input  = " ";
+			add_input += root->value;
+			String input = (root->data).c_str() + add_input;
+			TreeView->Items->Add(NULL, input);
+			Print_tree(root, TreeView, index);
+		}
+	}
+
+	int Amount_of_left_nodes()
+	{
+		counter = 0;
+
+		return Amount_of_left_nodes(root);
+	}
+
+private:
+	void Print_tree(Node<T>* temp, TTreeView *TreeView, int &index)
+	{
+		int i = index;
+
+		if(temp->left)
+		{
+			String add_input =  " ";
+			add_input += temp->left->value;
+			String input = (temp->left->data).c_str() + add_input;
+			TreeView->Items->AddChild(TreeView->Items->Item[i], input);
+			Print_tree(temp->left, TreeView, ++index);
+		}
+		if(temp->right)
+		{
+			String add_input = " ";
+			add_input += temp->right->value;
+			String input = (temp->right->data).c_str() + add_input;
+			TreeView->Items->AddChild(TreeView->Items->Item[i], input);
+			Print_tree(temp->right, TreeView, ++index);
+		}
+	}
+
+	int Amount_of_left_nodes(Node<T>* ptr)
+	{
+		if(ptr->left != NULL)
+			Amount_of_left_nodes(ptr->left);
+
+		if(ptr == root)
+			return counter;
+
+		++counter;
+
+		if(ptr->right != NULL)
+			Amount_of_left_nodes(ptr->right);
+	}
+
+	int counter;
+};
+

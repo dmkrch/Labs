@@ -1,0 +1,15 @@
+#ifndef OrderH
+#define OrderH
+
+#endif
+
+class Order
+{
+	public:
+
+
+
+	private:
+		int index;
+		int tableIndex;
+};

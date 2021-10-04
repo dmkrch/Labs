@@ -1,0 +1,34 @@
+﻿Выполняется установка сборки 'D:\Programming\Labs\third_sem\CSharp\lab5\Northwind.DataManagerService\Northwind.DataManagerService\bin\Debug\Northwind.DataManagerService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\Programming\Labs\third_sem\CSharp\lab5\Northwind.DataManagerService\Northwind.DataManagerService\bin\Debug\Northwind.DataManagerService.InstallLog
+   assemblypath = D:\Programming\Labs\third_sem\CSharp\lab5\Northwind.DataManagerService\Northwind.DataManagerService\bin\Debug\Northwind.DataManagerService.exe
+Устанавливается служба DataManagerService...
+Служба DataManagerService успешно установлена.
+Создается исходный EventLog DataManagerService в журнале Application...
+Выполняется фиксация сборки 'D:\Programming\Labs\third_sem\CSharp\lab5\Northwind.DataManagerService\Northwind.DataManagerService\bin\Debug\Northwind.DataManagerService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\Programming\Labs\third_sem\CSharp\lab5\Northwind.DataManagerService\Northwind.DataManagerService\bin\Debug\Northwind.DataManagerService.InstallLog
+   assemblypath = D:\Programming\Labs\third_sem\CSharp\lab5\Northwind.DataManagerService\Northwind.DataManagerService\bin\Debug\Northwind.DataManagerService.exe
+Выполняется удаление сборки 'D:\Programming\Labs\third_sem\CSharp\lab5\Northwind.DataManagerService\Northwind.DataManagerService\bin\Debug\Northwind.DataManagerService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\Programming\Labs\third_sem\CSharp\lab5\Northwind.DataManagerService\Northwind.DataManagerService\bin\Debug\Northwind.DataManagerService.InstallLog
+   assemblypath = D:\Programming\Labs\third_sem\CSharp\lab5\Northwind.DataManagerService\Northwind.DataManagerService\bin\Debug\Northwind.DataManagerService.exe
+Выполняется удаление источника EventLog DataManagerService.
+Выполняется удаление службы DataManagerService из системы...
+Служба DataManagerService успешно удалена из системы.
+Выполняется установка сборки 'D:\Programming\Labs\third_sem\CSharp\lab5\Northwind.DataManagerService\Northwind.DataManagerService\bin\Debug\Northwind.DataManagerService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\Programming\Labs\third_sem\CSharp\lab5\Northwind.DataManagerService\Northwind.DataManagerService\bin\Debug\Northwind.DataManagerService.InstallLog
+   assemblypath = D:\Programming\Labs\third_sem\CSharp\lab5\Northwind.DataManagerService\Northwind.DataManagerService\bin\Debug\Northwind.DataManagerService.exe
+Устанавливается служба DataManagerService...
+Служба DataManagerService успешно установлена.
+Создается исходный EventLog DataManagerService в журнале Application...
+Выполняется фиксация сборки 'D:\Programming\Labs\third_sem\CSharp\lab5\Northwind.DataManagerService\Northwind.DataManagerService\bin\Debug\Northwind.DataManagerService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\Programming\Labs\third_sem\CSharp\lab5\Northwind.DataManagerService\Northwind.DataManagerService\bin\Debug\Northwind.DataManagerService.InstallLog
+   assemblypath = D:\Programming\Labs\third_sem\CSharp\lab5\Northwind.DataManagerService\Northwind.DataManagerService\bin\Debug\Northwind.DataManagerService.exe

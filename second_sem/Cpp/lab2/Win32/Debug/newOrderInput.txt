@@ -1,0 +1,31 @@
+23
+2B
+/////
+Ravioli
+1
+/////
+Margarita Pizza
+2
+/////
+Pasta Carbonara
+3
+-------------------
+25
+4C
+/////
+Pasta Carbonara
+3
+/////
+Ravioli
+2
+-------------------
+26
+6A
+/////
+Ravioli
+5
+/////
+Margarita Pizza
+1
+-------------------
+eof

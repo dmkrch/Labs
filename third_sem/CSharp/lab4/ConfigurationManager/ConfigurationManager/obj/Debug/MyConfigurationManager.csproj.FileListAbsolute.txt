@@ -1,0 +1,1 @@
+D:\Programming\Labs\third_sem\CSharp\lab4\ConfigurationManager\ConfigurationManager\obj\Debug\MyConfigurationManager.csproj.CoreCompileInputs.cache

@@ -1,0 +1,68 @@
+#ifndef MainH
+#define MainH
+
+#include <System.Classes.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+#include <Vcl.ExtCtrls.hpp>
+
+#include "Figure.h"
+#include "Ellipsee.h"
+#include "Cirk.h"
+#include "Trapezium.h"
+#include "Parallelogram.h"
+#include "Rectanglee.h"
+#include "Trianglee.h"
+
+class TForm1 : public TForm
+{
+__published:	// IDE-managed Components
+	TImage *Image1;
+	TRadioGroup *RadioGroup1;
+	TButton *Button1;
+	TComboBox *ComboBox1;
+	TComboBox *ComboBox2;
+	TEdit *Edit1;
+	TEdit *Edit2;
+	TEdit *Edit3;
+	TEdit *Edit4;
+	TLabel *Label1;
+	TEdit *Edit5;
+	TLabel *Label2;
+	TEdit *Edit6;
+	TEdit *Edit7;
+	TLabel *Label3;
+	TLabel *Label4;
+	TLabel *Label5;
+	TRadioGroup *RadioGroup2;
+	void __fastcall Image1MouseDown(TObject *Sender, TMouseButton Button, TShiftState Shift,
+          int X, int Y);
+	void __fastcall Button1Click(TObject *Sender);
+	void __fastcall ComboBox1Change(TObject *Sender);
+	void __fastcall ComboBox2Change(TObject *Sender);
+	void __fastcall Image1MouseMove(TObject *Sender, TShiftState Shift, int X, int Y);
+	void __fastcall Image1MouseUp(TObject *Sender, TMouseButton Button, TShiftState Shift,
+          int X, int Y);
+	void __fastcall FormMouseWheelUp(TObject *Sender, TShiftState Shift, TPoint &MousePos,
+          bool &Handled);
+	void __fastcall FormMouseWheelDown(TObject *Sender, TShiftState Shift, TPoint &MousePos,
+          bool &Handled);
+
+
+private:	// User declarations
+	Ellipsee *ellipse;
+Cirk *cirk;
+Trapezium *trapezium;
+Parallelogram *parallelogram;
+Rectanglee *rectanglee;
+Trianglee *trianglee;
+bool move_state = false;
+public:		// User declarations
+	//extern void set_current_color(TObject* Sender);
+	__fastcall TForm1(TComponent* Owner);
+};
+
+extern PACKAGE TForm1 *Form1;
+
+#endif

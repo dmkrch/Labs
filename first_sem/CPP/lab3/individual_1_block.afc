@@ -1,0 +1,22 @@
+<!DOCTYPE AFC>
+<algorithm>
+  <branch>
+    <io text="Input number" />
+    <pre cond="number > 0 " >
+      <branch>
+        <io text="Input i" />
+        <process text="n = 1" />
+        <pre cond="n &lt;= i " >
+          <branch>
+            <process text="++n" />
+            <process text="argument_s = pow..." />
+            <process text="function_s += argument_s;" />
+          </branch>
+        </pre>
+        <process text="function_y = formula" />
+        <io text="Output function_s" />
+        <io text="Output function_y" />
+      </branch>
+    </pre>
+  </branch>
+</algorithm>

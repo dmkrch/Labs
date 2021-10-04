@@ -1,0 +1,18 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#ifndef RectangH
+#define RectangH
+//---------------------------------------------------------------------------
+#endif
+
+class Rectang
+{
+	int x1, y1, x2, y2;
+
+	public:
+		Rectang::Rectang(int x1, int y1, int x2, int y2);
+		void show(TCanvas *Canvas);
+		void move(TCanvas *Canvas);
+		void hide(TCanvas *Canvas);
+};

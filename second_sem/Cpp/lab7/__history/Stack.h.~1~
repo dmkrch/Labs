@@ -1,0 +1,168 @@
+//---------------------------------------------------------------------------
+
+#ifndef StackH
+#define StackH
+//---------------------------------------------------------------------------
+#endif
+
+#include <vcl.h>
+
+template <typename T>
+class Node
+{
+public:
+	Node* pNext;
+	T data;
+
+	Node(T data = T(), Node* pNext = NULL)
+	{
+		this->data = data;
+		this->pNext = pNext;
+	}
+};
+
+
+template<typename T>
+class Stack
+{
+	public:
+		Stack();
+		~Stack();
+
+		void clear();
+		void pop_back();
+		void push_back(T data);
+		int GetSize() { return Size; }
+		//T& operator[](const int index);
+		void removeAt(int index);
+		void show();
+
+
+	private:
+		void pop_front();
+		int Size;
+		Node<T> *head;
+};
+
+
+
+template <typename T>
+Stack<T>::Stack()
+{
+	Size = 0;
+	head = NULL;
+}
+
+
+template <typename T>
+Stack<T>::~Stack()
+{
+
+}
+
+
+template<typename T>
+void Stack<T>::clear()
+{
+	while (Size)
+	{
+		pop_back();
+	}
+}
+
+
+template<typename T>
+void Stack<T>::pop_back()
+{
+	removeAt(Size - 1);
+}
+
+
+template<typename T>
+void Stack<T>::push_back(T data)
+{
+	if (head == nullptr)
+	{
+		head = new Node<T>(data);
+	}
+	else
+	{
+		Node<T>* current = this->head;
+		while (current ->pNext != NULL)
+		{
+			current = current->pNext;
+		}
+
+		current->pNext = new Node<T>(data);
+	}
+
+	++Size;
+}
+
+
+/*template<typename T>
+T& Stack<T>::operator[](const int index)
+{
+	int counter = 0;
+
+	Node<T>* current = this->head;
+	while (current != NULL)
+	{
+		if (counter == index)
+		{
+			return current->data;
+		}
+		current = current->pNext;
+		counter++;
+	}
+
+}      */
+
+template<typename T>
+void Stack<T>::removeAt(int index)
+{
+	if (index == 0)
+	{
+		pop_front();
+	}
+
+	else
+	{
+		Node<T>* previous = this->head;
+		for (int i = 0; i < index - 1; i++)
+		{
+			previous = previous->pNext;
+		}
+
+		Node<T>* toDelete = previous->pNext;
+
+		previous->pNext = toDelete->pNext;
+
+		delete toDelete;
+		Size--;
+	}
+}
+
+template<typename T>
+void Stack<T>::pop_front()
+{
+	Node<T> *temp = head;
+	head = head->pNext;
+
+	delete temp;
+
+	Size--;
+}
+
+template<typename T>
+void Stack<T>::show()
+{
+	Node<T>* current = this->head;
+
+	for (int i = 0; i < Size; ++i)
+	{
+		std::cout << current->data << " ";
+
+		current = current->pNext;
+	}
+}

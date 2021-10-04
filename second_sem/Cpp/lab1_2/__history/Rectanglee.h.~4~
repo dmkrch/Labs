@@ -1,0 +1,39 @@
+#ifndef RectangleeH
+#define RectangleeH
+
+
+#include "Figure.h"
+#include <vcl.h>
+
+#endif
+
+class Rectanglee : public Figure
+{
+	public:
+		Rectanglee()
+		{
+
+		}
+
+		void show(TCanvas *Canvas, TImage *Image1)
+		{
+			Image1 -> Canvas -> MoveTo(get_first_x_coord(), get_first_y_coord());
+
+			Image1 -> Canvas -> LineTo(get_second_x_coord(), get_second_y_coord());
+			Image1 -> Canvas -> LineTo(get_third_x_coord(), get_third_y_coord());
+			Image1 -> Canvas -> LineTo(get_fourth_x_coord(), get_fourth_y_coord());
+			Image1 -> Canvas -> LineTo(get_first_x_coord(), get_first_y_coord());
+
+
+			Image1->Canvas->FloodFill(get_center_x_coord(), get_center_y_coord(), clWhite, fsSurface);
+		}
+
+		void set_area_and_perimeter()
+		{
+			int a = abs(get_first_x_coord() - get_fourth_x_coord());
+			int b = abs(get_first_y_coord() - get_second_y_coord());
+
+			set_area(a * b);
+			set_perimeter(2 * a + 2 * b);
+        }
+};

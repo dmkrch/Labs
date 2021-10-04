@@ -1,0 +1,11 @@
+D:\Prog\lab_2_sem\ИСП  (C#)\lab3_1\lab3_1\bin\Debug\netcoreapp3.1\lab3_1.exe
+D:\Prog\lab_2_sem\ИСП  (C#)\lab3_1\lab3_1\bin\Debug\netcoreapp3.1\lab3_1.deps.json
+D:\Prog\lab_2_sem\ИСП  (C#)\lab3_1\lab3_1\bin\Debug\netcoreapp3.1\lab3_1.runtimeconfig.json
+D:\Prog\lab_2_sem\ИСП  (C#)\lab3_1\lab3_1\bin\Debug\netcoreapp3.1\lab3_1.runtimeconfig.dev.json
+D:\Prog\lab_2_sem\ИСП  (C#)\lab3_1\lab3_1\bin\Debug\netcoreapp3.1\lab3_1.dll
+D:\Prog\lab_2_sem\ИСП  (C#)\lab3_1\lab3_1\bin\Debug\netcoreapp3.1\lab3_1.pdb
+D:\Prog\lab_2_sem\ИСП  (C#)\lab3_1\lab3_1\obj\Debug\netcoreapp3.1\lab3_1.csprojAssemblyReference.cache
+D:\Prog\lab_2_sem\ИСП  (C#)\lab3_1\lab3_1\obj\Debug\netcoreapp3.1\lab3_1.AssemblyInfoInputs.cache
+D:\Prog\lab_2_sem\ИСП  (C#)\lab3_1\lab3_1\obj\Debug\netcoreapp3.1\lab3_1.AssemblyInfo.cs
+D:\Prog\lab_2_sem\ИСП  (C#)\lab3_1\lab3_1\obj\Debug\netcoreapp3.1\lab3_1.dll
+D:\Prog\lab_2_sem\ИСП  (C#)\lab3_1\lab3_1\obj\Debug\netcoreapp3.1\lab3_1.pdb

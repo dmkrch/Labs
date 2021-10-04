@@ -1,0 +1,9 @@
+D:\Programming\Labs\third_sem\CSharp\lab4\Northwind.DataAccessLayer\Northwind.DataAccessLayer\obj\Debug\Northwind.DataAccessLayer.csprojAssemblyReference.cache
+D:\Programming\Labs\third_sem\CSharp\lab4\Northwind.DataAccessLayer\Northwind.DataAccessLayer\obj\Debug\Northwind.DataAccessLayer.csproj.CoreCompileInputs.cache
+D:\Programming\Labs\third_sem\CSharp\lab4\Northwind.DataAccessLayer\Northwind.DataAccessLayer\bin\Debug\Northwind.DataAccessLayer.dll
+D:\Programming\Labs\third_sem\CSharp\lab4\Northwind.DataAccessLayer\Northwind.DataAccessLayer\bin\Debug\Northwind.DataAccessLayer.pdb
+D:\Programming\Labs\third_sem\CSharp\lab4\Northwind.DataAccessLayer\Northwind.DataAccessLayer\bin\Debug\Northwind.Models.dll
+D:\Programming\Labs\third_sem\CSharp\lab4\Northwind.DataAccessLayer\Northwind.DataAccessLayer\bin\Debug\Northwind.Models.pdb
+D:\Programming\Labs\third_sem\CSharp\lab4\Northwind.DataAccessLayer\Northwind.DataAccessLayer\obj\Debug\Northwind.DataAccessLayer.csproj.CopyComplete
+D:\Programming\Labs\third_sem\CSharp\lab4\Northwind.DataAccessLayer\Northwind.DataAccessLayer\obj\Debug\Northwind.DataAccessLayer.dll
+D:\Programming\Labs\third_sem\CSharp\lab4\Northwind.DataAccessLayer\Northwind.DataAccessLayer\obj\Debug\Northwind.DataAccessLayer.pdb

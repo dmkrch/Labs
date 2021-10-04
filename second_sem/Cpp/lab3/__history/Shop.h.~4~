@@ -1,0 +1,28 @@
+#ifndef ShopH
+#define ShopH
+
+#endif
+
+#pragma once
+#include <vcl.h>
+#include "Order.h"
+#include <vector>
+
+
+class Shop
+{
+	public:
+		Shop(){}
+
+		void Initialize_shop(String file)
+		{
+            TStringList *List = new TStringList;
+			AnsiString fileName = file ;
+			List->LoadFromFile(fileName);
+		}
+
+
+	private:
+		std::vector <Order> _ready_orders;
+		std::vector <Order> _not_ready_orders;
+};

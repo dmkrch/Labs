@@ -1,0 +1,23 @@
+<!DOCTYPE AFC>
+<algorithm>
+  <branch>
+    <io text="Input low, up, sep" />
+    <process text="step = (up - low)/sep" />
+    <process text="x = low" />
+    <pre cond="x &lt;= up" >
+      <branch>
+        <process text="function = formula" />
+        <if cond="funct &lt; fun_min " >
+          <branch>
+            <process text="funct = funct_min" />
+            <process text="x_min = x" />
+          </branch>
+          <branch/>
+        </if>
+        <process text="x += step" />
+      </branch>
+    </pre>
+    <io text="Output function_min" />
+    <io text="Output x_min" />
+  </branch>
+</algorithm>

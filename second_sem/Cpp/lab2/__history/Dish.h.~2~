@@ -1,0 +1,17 @@
+#ifndef DishH
+#define DishH
+
+#include <string>
+
+#endif
+
+class Dish
+{
+	public:
+
+
+	private:
+		std::string _name;
+		std::string _desription;
+		int _price;
+};

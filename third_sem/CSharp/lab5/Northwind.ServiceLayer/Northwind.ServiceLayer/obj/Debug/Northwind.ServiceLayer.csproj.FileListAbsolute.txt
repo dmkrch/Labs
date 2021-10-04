@@ -1,0 +1,11 @@
+D:\Programming\Labs\third_sem\CSharp\lab5\Northwind.ServiceLayer\Northwind.ServiceLayer\bin\Debug\Northwind.ServiceLayer.dll
+D:\Programming\Labs\third_sem\CSharp\lab5\Northwind.ServiceLayer\Northwind.ServiceLayer\bin\Debug\Northwind.ServiceLayer.pdb
+D:\Programming\Labs\third_sem\CSharp\lab5\Northwind.ServiceLayer\Northwind.ServiceLayer\bin\Debug\Northwind.DataAccessLayer.dll
+D:\Programming\Labs\third_sem\CSharp\lab5\Northwind.ServiceLayer\Northwind.ServiceLayer\bin\Debug\Northwind.Models.dll
+D:\Programming\Labs\third_sem\CSharp\lab5\Northwind.ServiceLayer\Northwind.ServiceLayer\bin\Debug\Northwind.DataAccessLayer.pdb
+D:\Programming\Labs\third_sem\CSharp\lab5\Northwind.ServiceLayer\Northwind.ServiceLayer\bin\Debug\Northwind.Models.pdb
+D:\Programming\Labs\third_sem\CSharp\lab5\Northwind.ServiceLayer\Northwind.ServiceLayer\obj\Debug\Northwind.ServiceLayer.csprojAssemblyReference.cache
+D:\Programming\Labs\third_sem\CSharp\lab5\Northwind.ServiceLayer\Northwind.ServiceLayer\obj\Debug\Northwind.ServiceLayer.csproj.CoreCompileInputs.cache
+D:\Programming\Labs\third_sem\CSharp\lab5\Northwind.ServiceLayer\Northwind.ServiceLayer\obj\Debug\Northwind.ServiceLayer.csproj.CopyComplete
+D:\Programming\Labs\third_sem\CSharp\lab5\Northwind.ServiceLayer\Northwind.ServiceLayer\obj\Debug\Northwind.ServiceLayer.dll
+D:\Programming\Labs\third_sem\CSharp\lab5\Northwind.ServiceLayer\Northwind.ServiceLayer\obj\Debug\Northwind.ServiceLayer.pdb

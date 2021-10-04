@@ -1,0 +1,10 @@
+bin/Debug/netcoreapp3.1/doctor.deps.json
+bin/Debug/netcoreapp3.1/doctor.dll
+bin/Debug/netcoreapp3.1/doctor.exe
+bin/Debug/netcoreapp3.1/doctor.pdb
+bin/Debug/netcoreapp3.1/doctor.runtimeconfig.dev.json
+bin/Debug/netcoreapp3.1/doctor.runtimeconfig.json
+
+
+obj/
+doctor.csproj

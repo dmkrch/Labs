@@ -1,0 +1,7 @@
+D:\Programming\Labs\third_sem\CSharp\lab4\Northwind.DataManager\Northwind.DataManager\bin\Debug\Northwind.DataManager.exe.config
+D:\Programming\Labs\third_sem\CSharp\lab4\Northwind.DataManager\Northwind.DataManager\bin\Debug\Northwind.DataManager.exe
+D:\Programming\Labs\third_sem\CSharp\lab4\Northwind.DataManager\Northwind.DataManager\bin\Debug\Northwind.DataManager.pdb
+D:\Programming\Labs\third_sem\CSharp\lab4\Northwind.DataManager\Northwind.DataManager\obj\Debug\Northwind.DataManager.csprojAssemblyReference.cache
+D:\Programming\Labs\third_sem\CSharp\lab4\Northwind.DataManager\Northwind.DataManager\obj\Debug\Northwind.DataManager.csproj.CoreCompileInputs.cache
+D:\Programming\Labs\third_sem\CSharp\lab4\Northwind.DataManager\Northwind.DataManager\obj\Debug\Northwind.DataManager.exe
+D:\Programming\Labs\third_sem\CSharp\lab4\Northwind.DataManager\Northwind.DataManager\obj\Debug\Northwind.DataManager.pdb

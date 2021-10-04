@@ -1,0 +1,5 @@
+#pragma hdrstop
+
+#include "MyOrder.h"
+
+#pragma package(smart_init)

@@ -1,0 +1,184 @@
+//---------------------------------------------------------------------------
+
+#ifndef AlgorithmH
+#define AlgorithmH
+
+#include <vcl.h>
+#include <vector>
+#include <string>
+//---------------------------------------------------------------------------
+#endif
+
+class Algorithm
+{
+    public:
+        std::vector <double> stack;
+        std::vector <char> char_stack;
+
+        void Push(double number)
+        {
+            stack.push_back(number);
+        }
+
+        double Pop()
+        {
+            double returnValue = stack[stack.size() - 1];
+            stack.pop_back();
+
+            return returnValue;
+        }
+
+        void Show_all_operands()
+        {
+            for (double i = 0; i < stack.size(); ++i)
+            {
+                std::cout << stack[i] << " ";
+            }
+        }
+
+        int Get_priority(char a)
+        {
+            if (a == '+' || a == '-')
+                return 2;
+            else if (a == '*' || a == '/')
+                return 3;
+            else return -1;
+		}
+
+		double Execute_calculations(String pattern)
+		{
+			for (int i = 0; i < pattern.Length(); ++i)
+            {
+                if (pattern[i] >= 'a' && pattern[i] < 'z')
+                {
+                    switch (pattern[i])
+					{
+                    case 'a':
+                        Push(9.1);
+                        break;
+
+                    case 'b':
+                        Push(0.6);
+                        break;
+
+                    case 'c':
+                        Push(2.4);
+                        break;
+
+                    case 'd':
+                        Push(3.7);
+                        break;
+
+                    case 'e':
+                        Push(8.5);
+                        break;
+                    }
+                }
+
+                else if (pattern[i] == '+')
+                {
+                    Push(Pop() + Pop());
+                }
+
+                else if (pattern[i] == '-')
+                {
+                    double first = Pop();
+                    Push(Pop() - first);
+                }
+
+                else if (pattern[i] == '*')
+                {
+                    Push(Pop() * Pop());
+                }
+
+                else if (pattern[i] == '/')
+                {
+					double first = Pop();
+                    Push(Pop() / first);
+				}
+			}
+
+			return stack[stack.size() - 1];
+		}
+
+		String Get_OPZ(String pattern)
+		{
+			String result_string;
+
+			for (int i = 0; i < pattern.Length(); ++i)
+			{
+				if (pattern[i] >= 'a' && pattern[i] <= 'z')
+				{
+                    result_string += pattern[i];
+                }
+
+                else
+                {
+                    if (char_stack.size() == 0)
+                    {
+                        char_stack.push_back(pattern[i]);
+                    }
+
+                    else
+                    {
+                        switch (pattern[i])
+                        {
+                            case '(':
+                                char_stack.push_back(pattern[i]);
+                                break;
+
+                            case ')':
+                                for (int k = char_stack.size() - 1;; --k)
+                                {
+                                    if (char_stack[k] == '(')
+                                    {
+                                        char_stack.erase(char_stack.begin() + k);
+                                        break;
+                                    }
+
+                                    else
+                                    {
+                                        result_string += char_stack[k];
+                                        char_stack.erase(char_stack.begin() + k);
+                                    }
+                                }
+                                break;
+
+                            case '+':
+                            case '-':
+                            case '*':
+                            case '/':
+                                for (int k = char_stack.size() - 1; k >= 0; --k)
+                                {
+                                    if (char_stack[k] == '(')
+                                    {
+                                        break;
+                                    }
+
+                                    if (Get_priority(pattern[i]) <= Get_priority(char_stack[k]))
+                                    {
+                                        result_string += char_stack[k];
+                                        char_stack.erase(char_stack.begin() + k);
+                                    }
+                                }
+
+                                char_stack.push_back(pattern[i]);
+
+                                break;
+                        }
+                    }
+                }
+            }
+
+            if (char_stack.size() != 0)
+            {
+                for (int k = char_stack.size() - 1;k >= 0; --k)
+                {
+                    result_string += char_stack[k];
+                }
+            }
+
+
+			return result_string;
+        }
+};

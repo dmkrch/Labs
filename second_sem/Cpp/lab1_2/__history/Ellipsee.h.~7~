@@ -1,0 +1,59 @@
+#ifndef EllipseeH
+#define EllipseeH
+
+#include <vcl.h>
+#include "Figure.h"
+
+#endif
+
+class Ellipsee : public Figure
+{
+	public:
+		Ellipsee()
+		{
+
+		}
+
+		void set_first_x_coord(int coord)
+		{
+			first_x_coord = coord;
+		}
+
+		void set_first_y_coord(int coord)
+		{
+			first_y_coord = coord;
+		}
+
+		void set_second_x_coord(int coord)
+		{
+			second_x_coord = coord;
+		}
+
+		void set_second_y_coord(int coord)
+		{
+			second_y_coord = coord;
+		}
+
+		/*void hide(TCanvas *Canvas)
+		{
+
+		}
+
+		void move(TCanvas *Canvas)
+		{
+
+		} */
+
+		void show(TCanvas *Canvas)
+		{
+			Canvas->Pen->Color=clYellow;
+			Canvas->Brush->Color=clYellow;
+			Canvas->Ellipse(first_x_coord, first_y_coord, second_x_coord, second_y_coord);
+		}
+
+	private:
+		int first_x_coord;
+		int first_y_coord;
+		int second_x_coord;
+		int second_y_coord;
+};

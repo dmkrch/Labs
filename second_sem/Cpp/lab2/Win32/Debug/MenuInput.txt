@@ -1,0 +1,17 @@
+Pizza
+Insane margarita pizza with delicious flavour of cheese
+15
+----------
+Ravioli
+Type of pasta comprising a filling enveloped in thin pasta dough
+25
+----------
+Pasta Carbonara
+Italian pasta dish from Rome made with egg, bacon and mushroooms
+22
+----------
+Margarita Pizza
+Only cheese and dough
+12
+----------
+

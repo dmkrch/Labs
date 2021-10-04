@@ -1,0 +1,24 @@
+#ifndef OrderH
+#define OrderH
+
+#endif
+
+#pragma once
+#include <String>
+
+class MyOrder
+{
+	public:
+		MyOrder(AnsiString name, AnsiString address, AnsiString date)
+		{
+			_name = name;
+			_address = address;
+			_date = date;
+		}
+
+	private:
+		int _id;
+		AnsiString _name;
+		AnsiString _address;
+		AnsiString _date;
+};

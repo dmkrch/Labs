@@ -1,0 +1,25 @@
+<!DOCTYPE AFC>
+<algorithm>
+  <branch>
+    <process text="#define SIZE 10" />
+    <process text="int m1[SIZE]" />
+    <process text="int m2[SIZE]" />
+    <process text="int m3[SIZE]" />
+    <process text="Input to m1" />
+    <assign dest="j, i" src="0" />
+    <pre cond="i &lt; SIZE" >
+      <branch>
+        <process text="number = m1[i]" />
+        <process text="++m2[i]" />
+        <if cond="m2[m1[i]] == 1" >
+          <branch>
+            <process text="m3[j++] = m1[i]" />
+          </branch>
+          <branch/>
+        </if>
+        <assign dest="i" src="i + 1" />
+      </branch>
+    </pre>
+    <process text="Output m3" />
+  </branch>
+</algorithm>

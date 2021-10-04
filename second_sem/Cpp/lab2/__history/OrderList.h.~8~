@@ -1,0 +1,82 @@
+#ifndef OrderListH
+#define OrderListH
+
+#include <iostream>
+#include <vector>
+#include <string>
+#include "Order.h"
+#include "Dish.h"
+#include "Menu.h"
+
+#endif
+
+
+class OrderList
+{
+	public:
+		void InitInfo(AnsiString file, Menu *menu, TEdit *Edit1)
+		{
+			TStringList *List = new TStringList;
+			AnsiString fileName = file ;
+			List->LoadFromFile(fileName);
+
+
+			counter = 0;
+			amountOfOrders = 0;
+
+			for (int i = 0; List -> Strings[counter] != "eof"; ++i)
+			{
+
+				int orderIndex = (List -> Strings[counter++]).ToInt();
+				AnsiString tableIndex = List -> Strings[counter++];
+
+				Order order(orderIndex, tableIndex);
+
+				while(List -> Strings[counter++] == "/////")
+				{
+					AnsiString title = List -> Strings[counter++];
+					int quantity = (List -> Strings[counter++]).ToInt();
+
+					Dish dish = menu -> CheckDishByName(title);
+
+					if (dish.GetTitle() != "false")
+					{
+						order.AddDish(dish,quantity);
+					}
+				}
+
+				_orderList.push_back(order);
+
+				++amountOfOrders;
+			}
+		}
+
+		void ShowInfo(TMemo *Memo1)
+		{
+			Memo1->Lines->Clear();
+
+			for (int i = 0; i < amountOfOrders; i++)
+			{
+				String orderIndex("Order #" + (String)(_orderList[i].GetOrderIndex()));
+				String tableIndex("\tTable " + _orderList[i].GetTableIndex());
+
+				Memo1 -> Lines -> Add(orderIndex);
+				Memo1 -> Lines -> Add(tableIndex);
+				Memo1 -> Lines -> Add("\n");
+
+				for (int k = 0; k < _orderList[i].GetNumberOfDishes(); k++)
+				{
+					String title("\tDish: " + _orderList[i].GetTitle(k));
+					String quantity(" - " + (String)_orderList[i].GetQuantity(k));
+					String dish(title + quantity);
+
+					Memo1 -> Lines -> Add(dish);
+				}
+			}
+		}
+
+	private:
+		std::vector <Order> _orderList;
+		int counter;
+		int amountOfOrders;
+};

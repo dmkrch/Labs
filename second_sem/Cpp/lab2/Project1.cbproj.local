@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.719,D:\Prog\lab_2_sem\C++\lab2\Order.cpp=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Order.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.184,D:\Prog\lab_2_sem\C++\lab2\Project1.cbproj=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Project1.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.652,D:\Prog\lab_2_sem\C++\lab2\Dish.cpp=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Dish.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.358,D:\Prog\lab_2_sem\C++\lab2\OrderList.cpp=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\OrderList.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.168,D:\Prog\lab_2_sem\C++\lab2\Project1PCH1.h=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.086,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Menu.h=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.021,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Dish.cpp=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.664,D:\Prog\lab_2_sem\C++\lab2\Main.dfm=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Main.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.093,=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.743,=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.375,D:\Prog\lab_2_sem\C++\lab2\Menu.cpp=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Menu.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.765,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Main.cpp=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.652,D:\Prog\lab_2_sem\C++\lab2\Dish.h=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Dish.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.710,=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.236,=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.257,=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.358,D:\Prog\lab_2_sem\C++\lab2\OrderList.h=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\OrderList.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.664,D:\Prog\lab_2_sem\C++\lab2\Main.h=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Main.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.761,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Order.cpp=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.021,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Dish.h=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit2.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.297,=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.375,D:\Prog\lab_2_sem\C++\lab2\Menu.h=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Menu.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.664,D:\Prog\lab_2_sem\C++\lab2\Main.cpp=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Main.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.086,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Menu.cpp=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.719,D:\Prog\lab_2_sem\C++\lab2\Order.h=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Order.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.239,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\OrderList.h=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.765,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Main.dfm=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.765,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Main.h=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.606,=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.427,=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.239,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\OrderList.cpp=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.761,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Order.h=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.h</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Main.cpp"/>
+    <File Path="Main.cpp"/>
+    <File Path="Main.dfm"/>
+    <File Path="Main.h"/>
+    <File Path="Menu.cpp"/>
+    <File Path="Menu.cpp"/>
+    <File Path="Menu.h"/>
+    <File Path="Dish.cpp"/>
+    <File Path="Dish.cpp"/>
+    <File Path="Dish.h"/>
+    <File Path="OrderList.cpp"/>
+    <File Path="OrderList.cpp"/>
+    <File Path="OrderList.h"/>
+    <File Path="Order.cpp"/>
+    <File Path="Order.cpp"/>
+    <File Path="Order.h"/>
+    <File Path="Project1.cpp"/>
+    <File Path="Project1PCH1.h"/>
+  </ProjectSortOrder>
+</BorlandProject>

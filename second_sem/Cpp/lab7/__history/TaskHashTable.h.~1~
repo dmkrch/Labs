@@ -1,0 +1,16 @@
+//---------------------------------------------------------------------------
+
+#ifndef TaskHashTableH
+#define TaskHashTableH
+//---------------------------------------------------------------------------
+#endif
+
+#include "HashTable.h"
+
+class TaskHashTable : public HashTable
+{
+
+
+
+
+};

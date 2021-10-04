@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileWatcherService", "FileWatcherService\FileWatcherService.csproj", "{CE8C9DC5-0428-465A-AA5C-C9D4E81CE0D8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "myLib", "..\myLib\myLib\myLib.csproj", "{8F578FCD-929B-4FB5-AB9C-12B11452D5F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE8C9DC5-0428-465A-AA5C-C9D4E81CE0D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE8C9DC5-0428-465A-AA5C-C9D4E81CE0D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE8C9DC5-0428-465A-AA5C-C9D4E81CE0D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE8C9DC5-0428-465A-AA5C-C9D4E81CE0D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F578FCD-929B-4FB5-AB9C-12B11452D5F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F578FCD-929B-4FB5-AB9C-12B11452D5F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F578FCD-929B-4FB5-AB9C-12B11452D5F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F578FCD-929B-4FB5-AB9C-12B11452D5F0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FF1A1771-E065-44B5-9948-12DB31E6CF93}
+	EndGlobalSection
+EndGlobal

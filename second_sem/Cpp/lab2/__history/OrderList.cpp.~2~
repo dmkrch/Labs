@@ -1,0 +1,22 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include <iostream>
+#include <vector>
+#include "OrderList.h"
+#include "Order.h"
+
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+
+
+class OrderList
+{
+	public:
+		Order order;
+
+	private:
+		std::vector <Order> orderList;
+
+};

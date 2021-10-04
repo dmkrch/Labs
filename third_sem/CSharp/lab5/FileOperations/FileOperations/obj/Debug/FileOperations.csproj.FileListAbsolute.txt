@@ -1,0 +1,6 @@
+D:\Programming\Labs\third_sem\CSharp\lab5\FileOperations\FileOperations\bin\Debug\FileOperations.dll
+D:\Programming\Labs\third_sem\CSharp\lab5\FileOperations\FileOperations\bin\Debug\FileOperations.pdb
+D:\Programming\Labs\third_sem\CSharp\lab5\FileOperations\FileOperations\obj\Debug\FileOperations.csproj.CoreCompileInputs.cache
+D:\Programming\Labs\third_sem\CSharp\lab5\FileOperations\FileOperations\obj\Debug\FileOperations.dll
+D:\Programming\Labs\third_sem\CSharp\lab5\FileOperations\FileOperations\obj\Debug\FileOperations.pdb
+D:\Programming\Labs\third_sem\CSharp\lab5\FileOperations\FileOperations\obj\Debug\FileOperations.csprojAssemblyReference.cache

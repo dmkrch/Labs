@@ -1,0 +1,26 @@
+#ifndef TriangleeH
+#define TriangleeH
+
+#include <vcl.h>
+#include "Figure.h"
+
+#endif
+
+class Trianglee : public Figure
+{
+	public:
+		Trianglee()
+		{
+
+		}
+
+        void show(TCanvas *Canvas, TImage *Image1)
+		{
+			Image1 -> Canvas -> MoveTo(get_first_x_coord(), get_first_y_coord());
+
+			Image1 -> Canvas -> LineTo(get_second_x_coord(), get_second_y_coord());
+			Image1 -> Canvas -> LineTo(get_third_x_coord(), get_third_y_coord());
+			Image1 -> Canvas -> LineTo(get_first_x_coord(), get_first_y_coord());
+		}
+
+};

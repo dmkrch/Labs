@@ -1,0 +1,19 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include "Trolley.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+
+void  TrafficController :: DrawController(TCanvas *Canvas)
+{
+	class Trolley
+	{
+
+
+
+
+
+    };
+}

@@ -1,0 +1,68 @@
+#ifndef ShopH
+#define ShopH
+
+#endif
+
+#pragma once
+#include <vcl.h>
+#include "Order.h"
+#include <vector>
+#include <iostream.h>
+#include <string>
+
+
+class Shop
+{
+	public:
+		Shop()
+		{
+			counter = 0;
+		}
+
+		void Initialize_shop(String file)
+		{
+            TStringList *List = new TStringList;
+			AnsiString fileName = file ;
+			List->LoadFromFile(fileName);
+
+			int i = 0;
+
+			while(List -> Strings[i++] != "eof")
+			{
+				String name = List -> Strings[i++];
+				String address = List -> Strings[i++];
+				String date = List -> Strings[i++];
+
+				Order order(name, address, date, counter);
+				_not_ready_orders.push_back(order);
+
+				++counter;
+			}
+
+		}
+
+		void ShowInfo(TMemo *Memo1)
+		{
+			Memo1->Lines->Clear();
+
+			for (int i = 0; i < counter; i++)
+			{
+				String id("id: " + (String)_not_ready_orders[i].Get_id());
+				String name("\tname: " + _not_ready_orders[i].Get_name());
+				String address("\taddress: " + _not_ready_orders[i].Get_address());
+				String date("\tdate: " + _not_ready_orders[i].Get_date());
+
+
+				Memo1 -> Lines -> Add(id);
+				Memo1 -> Lines -> Add(name);
+				Memo1 -> Lines -> Add(address);
+				Memo1 -> Lines -> Add(date);
+			}
+        }
+
+
+	private:
+		int counter;
+		std::vector <Order> _ready_orders;
+		std::vector <Order> _not_ready_orders;
+};

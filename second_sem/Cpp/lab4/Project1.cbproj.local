@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.039,=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.132,D:\Prog\lab_2_sem\C++\lab4\Project1.cbproj=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Project1.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.093,=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.204,=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.650,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Algorithm.h=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.901,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Main.cpp=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.538,D:\Prog\lab_2_sem\C++\lab4\Main.cpp=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Main.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.606,=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.035,=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.538,D:\Prog\lab_2_sem\C++\lab4\Main.h=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Main.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.650,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Algorithm.cpp=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.901,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Main.h=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.901,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Main.dfm=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.663,D:\Prog\lab_2_sem\C++\lab4\Algorithm.cpp=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Algorithm.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.366,D:\Prog\lab_2_sem\C++\lab4\Project1PCH1.h=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.663,D:\Prog\lab_2_sem\C++\lab4\Algorithm.h=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Algorithm.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.538,D:\Prog\lab_2_sem\C++\lab4\Main.dfm=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Main.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

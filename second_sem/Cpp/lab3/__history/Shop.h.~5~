@@ -1,0 +1,61 @@
+#ifndef ShopH
+#define ShopH
+
+#endif
+
+#pragma once
+#include <vcl.h>
+#include "Order.h"
+#include <vector>
+#include <iostream>
+#include <string>
+
+
+class Shop
+{
+	public:
+		Shop()
+		{
+			counter = 0;
+		}
+
+		void Initialize_shop(String file)
+		{
+            TStringList *List = new TStringList;
+			AnsiString fileName = file ;
+			List->LoadFromFile(fileName);
+
+			int i = 0;
+
+			String eof = "eof";
+			for (int i = 0; i < ((List -> Strings) / 4); i++)
+			{
+				String name = List[i++];
+				String address = List[i++];
+				String date = List[i++];
+
+				Order order(name, address, date, counter);
+				_not_ready_orders.push_back(order);
+
+				++counter;
+			}
+
+		}
+
+		void ShowInfo()
+		{
+			for (int i = 0; i < _not_ready_orders.size; i++)
+			{
+				std::cout << "name: " << _not_ready_orders[i].Get_name() <<
+							 "\naddress: " << _not_ready_orders[i].Get_address() <<
+							 "\ndate: " << _not_ready_orders[i].Get_date() <<
+							 "\nid: " << _not_ready_orders[i].Get_id();
+			}
+        }
+
+
+	private:
+		int counter;
+		std::vector <Order> _ready_orders;
+		std::vector <Order> _not_ready_orders;
+};

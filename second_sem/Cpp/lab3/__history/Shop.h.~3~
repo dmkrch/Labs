@@ -1,0 +1,37 @@
+#ifndef ShopH
+#define ShopH
+
+#endif
+
+#pragma once
+#include <vcl.h>
+
+
+class Shop
+{
+	public:
+		void Initialize_shop(String file)
+		{
+            TStringList *List = new TStringList;
+			AnsiString fileName = file ;
+			List->LoadFromFile(fileName);
+
+			amountOfDishes = (List -> Count) / 4;
+
+			for (int i = 0; i < amountOfDishes; ++i)
+			{
+				AnsiString title = List -> Strings[counter++];
+				AnsiString description = List -> Strings[counter++];
+				int price = (List -> Strings[counter++]).ToInt();
+				++counter;
+
+
+				Dish dish(title, description, price);
+				_menu.push_back(dish);
+			}
+		}
+
+
+	private:
+		std::vector <Order> _ready_orders;
+		std::vector <Order> _not_ready_orders;

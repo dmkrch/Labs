@@ -1,0 +1,52 @@
+<!DOCTYPE AFC>
+<algorithm>
+  <branch>
+    <process text="#define M 6 N 4" />
+    <process text="int m[M][N]" />
+    <process text="int sort, i, k" />
+    <process text="Input m[M][N]" />
+    <assign dest="i" src="0" />
+    <pre cond="i &lt; M" >
+      <branch>
+        <assign dest="k" src="0" />
+        <pre cond="k &lt; N" >
+          <branch>
+            <if cond="i==0 &amp;&amp;  k==0" >
+              <branch>
+                <process text="mult *= m[i][k]" />
+                <process text="continue" />
+              </branch>
+              <branch/>
+            </if>
+            <if cond="i==0 &amp;&amp; k==1" >
+              <branch>
+                <process text="sum += m[i][k]" />
+                <process text="continue" />
+              </branch>
+              <branch>
+                <if cond="sort%2 == 0" >
+                  <branch>
+                    <process text="mult *= m[i][k]" />
+                  </branch>
+                  <branch>
+                    <if cond="sort % 2 == 1" >
+                      <branch>
+                        <process text="sum += m[i][k]" />
+                      </branch>
+                      <branch/>
+                    </if>
+                    <process text="++sort" />
+                  </branch>
+                </if>
+              </branch>
+            </if>
+            <assign dest="i" src="i + 1" />
+          </branch>
+        </pre>
+        <assign dest="i" src="i + 1" />
+      </branch>
+    </pre>
+    <process text="cout &lt;&lt; sum" />
+    <process text="cout &lt;&lt; mult" />
+  </branch>
+</algorithm>

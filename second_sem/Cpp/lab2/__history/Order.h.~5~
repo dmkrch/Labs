@@ -1,0 +1,42 @@
+#ifndef OrderH
+#define OrderH
+
+#include <vector>
+#include "Dish.h"
+
+#endif
+
+class Order
+{
+	public:
+		Order(int orderIndex, int tableIndex, Dish dish, int quantity)
+		{
+			_orderIndex = orderIndex;
+			_tableIndex = tableIndex;
+			_dish.push_back(dish);
+			_dishesQuantity.push_back(quantity);
+		}
+
+		int GetOrderIndex()
+		{
+			return _orderIndex;
+		}
+
+		int GetTableIndex()
+		{
+			return _tableIndex;
+		}
+
+		String GetDishes()
+		{
+			for (int i = 0; i < 10; i++)
+			{
+                _dish[i]._price
+			}
+        }
+	private:
+		int _orderIndex;
+		int _tableIndex;
+		std::vector <Dish> _dish;
+		std::vector <int> _dishesQuantity;
+};

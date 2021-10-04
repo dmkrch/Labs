@@ -1,0 +1,16 @@
+<!DOCTYPE AFC>
+<algorithm>
+  <branch>
+    <io text="Input lim_bot" />
+    <io text="Input lim_up" />
+    <io text="Input step" />
+    <process text="x = lim_bot" />
+    <pre cond="x &lt;= lim_up" >
+      <branch>
+        <process text="function = formula" />
+        <io text="Output x, function" />
+        <process text="x += step" />
+      </branch>
+    </pre>
+  </branch>
+</algorithm>

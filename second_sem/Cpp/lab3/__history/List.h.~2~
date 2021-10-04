@@ -1,0 +1,164 @@
+#ifndef ListH
+#define ListH
+
+#endif
+#include "Order.h"
+#include <vcl.h>
+#include "Shop.h"
+
+template<typename T>
+class Node
+{
+	public:
+		Node* pNext;
+		T data;
+
+		Node(T data = Order(), Node* pNext = NULL)
+		{
+			this->data = data;
+			this->pNext = pNext;
+		}
+};
+
+
+template<typename T>
+class List
+{
+	public:
+		List()
+		{	Size = 0;
+			head = NULL;;
+		}
+
+		~List()
+		{
+
+		}
+
+		void clear()
+		{
+			while (Size)
+			{
+				pop_front();
+			}
+		}
+
+
+		void pop_front()
+		{
+            Node<T> *temp = head;
+			head = head->pNext;
+
+			delete temp;
+
+			Size--;
+		}
+
+
+		void pop_back()
+		{
+			removeAt(Size - 1);
+		}
+
+
+		void push_back(T data)
+		{
+			if (head == NULL)
+			{
+				head = new Node<T>(data);
+			}
+			else
+			{
+				Node<T>* current = this->head;
+				while (current ->pNext != NULL)
+				{
+					current = current->pNext;
+				}
+
+				current->pNext = new Node<T>(data);
+			}
+
+			++Size;
+		}
+
+		int GetSize() { return Size; }
+		T& operator[](const int index)
+		{
+			int counter = 0;
+
+			Node<T>* current = this->head;
+			while (current != NULL)
+			{
+				if (counter == index)
+				{
+					return current->data;
+				}
+				current = current->pNext;
+				counter++;
+			}
+
+		};
+
+
+		void push_front(T data)
+		{
+			head = new Node<T>(data, head);
+			Size++;
+		}
+
+
+		void insert(T data, int index)
+		{
+            if (index != 0)
+			{
+				Node<T>* previous = head;
+
+				for (int i = 0; i < index - 1; ++i)
+				{
+					previous = previous->pNext;
+				}
+
+				Node<T>* temp = previous->pNext;
+
+				previous->pNext = new Node<T>(data, temp);
+
+				++Size;
+			}
+
+			else
+			{
+				push_front(data);
+			}
+		}
+
+
+		void removeAt(int index)
+		{
+			if (index == 0)
+			{
+				pop_front();
+			}
+
+			else
+			{
+				Node<T>* previous = this->head;
+				for (int i = 0; i < index - 1; i++)
+				{
+					previous = previous->pNext;
+				}
+
+				Node<T>* toDelete = previous->pNext;
+
+				previous->pNext = toDelete->pNext;
+
+				delete toDelete;
+				Size--;
+			}
+        }
+
+
+	private:
+		int Size;
+		Node<T> *head;
+};
+

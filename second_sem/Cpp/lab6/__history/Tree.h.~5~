@@ -1,0 +1,300 @@
+#ifndef TreeH
+#define TreeH
+
+#endif
+
+#include <vcl.h>
+
+
+template <typename T>
+class Node
+{
+public:
+	Node(int value, T data)
+	{
+		this->value = value;
+		this->data = data;
+
+		right = NULL;
+		left = NULL;
+	}
+
+	T data;
+	int value;
+	Node* left;
+	Node* right;
+};
+
+
+
+template <typename T>
+class Tree
+{
+public:
+	Tree() { root = NULL; }
+	~Tree() { Destroy_tree(); }
+
+	void Key_print(TMemo* Memo1);
+	void Backward_print(TMemo* Memo1);
+	void Direct_print(TMemo* Memo1);
+	void Delete_node(int key);
+	void Show(int key);
+	void Destroy_tree();
+	void Insert(int key, T data = T());
+	void Add_array_info(int array[], int length);
+	Node<T>* Search(int key);
+
+	Node<T>* root;
+
+private:
+	Node<T>* Delete_node(Node<T>* temp, int key);
+	void Destroy_tree(Node<T>* leaf);
+	void Insert(int key, T data, Node<T>* leaf);
+	void Key_print(TMemo* Memo1, Node<T>* root);
+	void Backward_print(TMemo* Memo1, Node<T>* root);
+	void Direct_print(TMemo* Memo1, Node<T>* root);
+	Node<T>* Search(int key, Node<T>* leaf);
+};
+
+
+template <typename T>
+void Tree<T>::Destroy_tree(Node<T>* leaf)
+{
+	if (leaf != NULL)
+	{
+		Destroy_tree(leaf->left);
+		Destroy_tree(leaf->right);
+		delete leaf;
+	}
+}
+
+
+template <typename T>
+void Tree<T>::Insert(int key, T data, Node<T>* leaf)
+{
+
+	if (key < leaf->value)
+	{
+		if (leaf->left != NULL)
+		{
+			Insert(key, data, leaf->left);
+		}
+		else
+		{
+			leaf->left = new Node<T>(key, data);
+		}
+	}
+	else if (key >= leaf->value)
+	{
+		if (leaf->right != NULL)
+		{
+			Insert(key, data, leaf->right);
+		}
+		else
+		{
+			leaf->right = new Node<T>(key, data);
+		}
+	}
+
+}
+
+
+template <typename T>
+void Tree<T>::Insert(int key, T data)
+{
+	if (root != NULL)
+	{
+		Insert(key, data, root);
+	}
+	else
+	{
+		root = new Node<T>(key, data);
+	}
+}
+
+template <typename T>
+Node<T>* Tree<T>::Delete_node(Node<T>* root, int key)
+{
+	// Base case
+	if (root == NULL)
+		return root;
+
+	// Recursive calls for ancestors of
+	// node to be deleted
+	if (root->value > key)
+	{
+		root->left = Delete_node(root->left, key);
+		return root;
+	}
+	else if (root->value < key)
+	{
+		root->right = Delete_node(root->right, key);
+		return root;
+	}
+
+	// We reach here when root is the node
+	// to be deleted.
+
+	// If one of the children is empty
+	if (root->left == NULL)
+	{
+		Node<T>* temp = root->right;
+		delete root;
+		return temp;
+	}
+	else if (root->right == NULL)
+	{
+		Node<T>* temp = root->left;
+		delete root;
+		return temp;
+	}
+
+	// If both children exist
+	else
+	{
+
+		Node<T>* succParent = root;
+
+		// Find successor
+		Node<T>* succ = root->right;
+		while (succ->left != NULL)
+		{
+			succParent = succ;
+			succ = succ->left;
+		}
+
+		// Delete successor.  Since successor
+		// is always left child of its parent
+		// we can safely make successor's right
+		// right child as left of its parent.
+		// If there is no succ, then assign
+		// succ->right to succParent->right
+		if (succParent != root)
+			succParent->left = succ->right;
+		else
+			succParent->right = succ->right;
+
+		// Copy Successor Data to root
+		root->value = succ->value;
+
+		// Delete Successor and return root
+		delete succ;
+		return root;
+	}
+}
+
+
+template <typename T>
+void Tree<T>::Delete_node(int key)
+{
+	root = Delete_node(root, key);
+}
+
+
+template <typename T>
+Node<T>* Tree<T>::Search(int key, Node<T>* leaf)
+{
+	if (leaf != NULL)
+	{
+		if (key == leaf->value)
+		{
+			return leaf;
+		}
+		if (key < leaf->value)
+		{
+			return Search(key, leaf->left);
+		}
+		else
+		{
+			return Search(key, leaf->right);
+		}
+	}
+	else
+	{
+		return NULL;
+	}
+}
+
+
+template <typename T>
+Node<T>* Tree<T>::Search(int key)
+{
+	return Search(key, root);
+}
+
+
+template<typename T>
+void Tree<T>::Show(int key)
+{
+	Node<T>*current = Search(key);
+
+	//std::cout << current->value << ", " << current->data << ", ";
+}
+
+
+template <typename T>
+void Tree<T>::Destroy_tree()
+{
+	Destroy_tree(root);
+}
+
+
+template <typename T>
+void Tree<T>::Add_array_info(int array[], int length)
+{
+	for(int i = 0; i < length; ++i)
+	{
+		Insert(array[i]);
+	}
+}
+
+template <typename T>
+void Tree<T>::Direct_print(TMemo *Memo1)
+{
+	Direct_print(Memo1, root);
+}
+
+template <typename T>
+void Tree<T>::Direct_print(TMemo *Memo1, Node<T>* ptr)
+{
+	if(ptr)
+	{
+		Memo1->Lines->Add((ptr->data).c_str());
+		Direct_print(Memo1, ptr->left);
+		Direct_print(Memo1, ptr->right);
+	}
+}
+
+template <typename T>
+void Tree<T>::Backward_print(TMemo *Memo1)
+{
+	Backward_print(Memo1, root);
+}
+
+template <typename T>
+void Tree<T>::Backward_print(TMemo *Memo1, Node<T>* ptr)
+{
+	if(ptr)
+	{
+		Backward_print(Memo1, ptr->left);
+		Backward_print(Memo1, ptr->right);
+		Memo1->Lines->Add((ptr->data).c_str());
+	}
+}
+
+template <typename T>
+void Tree<T>::Key_print(TMemo *Memo1)
+{
+	Key_print(Memo1, root);
+}
+
+template <typename T>
+void Tree<T>::Key_print(TMemo *Memo1, Node<T>* ptr)
+{
+	if(ptr)
+	{
+		Key_print(Memo1, ptr->left);
+		Memo1->Lines->Add((ptr->data).c_str());
+		Key_print(Memo1, ptr->right);
+	}
+}

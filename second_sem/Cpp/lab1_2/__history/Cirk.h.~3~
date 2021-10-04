@@ -1,0 +1,32 @@
+#ifndef CirkH
+#define CirkH
+
+#include "Figure.h"
+#include <vcl.h>
+#include <math.h>
+
+
+#endif
+
+class Cirk : public Figure
+{
+	public:
+		Cirk()
+		{
+
+		}
+
+
+		void set_radius()
+		{
+			radius = abs(get_second_x_coord() - get_center_x_coord());
+		}
+
+        void show(TCanvas *Canvas, TImage *Image1)
+		{
+			Image1->Canvas->Ellipse(get_center_x_coord() - radius, get_center_y_coord() - radius, get_center_x_coord() + radius, get_center_y_coord() + radius);
+		}
+
+	private:
+		int radius;
+};

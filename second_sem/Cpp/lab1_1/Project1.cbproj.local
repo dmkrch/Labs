@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.684,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.cpp=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Rectangle.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.497,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Project1.cbproj=D:\Prog\lab_2_sem\C++ builder\lab1_1\Project1.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.883,=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.336,=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.580,=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.918,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.cpp=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Main.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.429,D:\Prog\lab_2_sem\C++\lab1_1\Circ.cpp=D:\Prog\lab_2_sem\C++\lab1_1\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.918,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Main.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.649,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Rectangle.h=D:\Prog\lab_2_sem\C++ builder\lab1_1\Rectangle.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.606,=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.029,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Project1PCH1.h=D:\Prog\lab_2_sem\C++ builder\lab1_1\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.327,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Main.cpp=D:\Prog\lab_2_sem\C++ builder\lab1_1\Main.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.093,=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.434,D:\Prog\lab_2_sem\C++ builder\lab1_1\Unit1.cpp=D:\Prog\lab_2_sem\C++ builder\lab1_1\Trolley.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.298,=D:\Prog\lab_2_sem\C++ builder\lab1_1\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.684,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.h=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Rectangle.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.327,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Main.dfm=D:\Prog\lab_2_sem\C++ builder\lab1_1\Main.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.327,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Main.h=D:\Prog\lab_2_sem\C++ builder\lab1_1\Main.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.533,D:\Prog\lab_2_sem\C++ builder\lab1_1\Rectang.h=D:\Prog\lab_2_sem\C++ builder\lab1_1\Rectangle.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.533,D:\Prog\lab_2_sem\C++ builder\lab1_1\Rectang.cpp=D:\Prog\lab_2_sem\C++ builder\lab1_1\Rectangle.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.447,=D:\Prog\lab_2_sem\C++\lab1_1\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.429,D:\Prog\lab_2_sem\C++\lab1_1\Circ.h=D:\Prog\lab_2_sem\C++\lab1_1\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.918,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.h=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Main.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.434,D:\Prog\lab_2_sem\C++ builder\lab1_1\Unit1.h=D:\Prog\lab_2_sem\C++ builder\lab1_1\Trolley.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.649,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Rectangle.cpp=D:\Prog\lab_2_sem\C++ builder\lab1_1\Rectangle.cpp</Transaction>
+  </Transactions>
+</BorlandProject>

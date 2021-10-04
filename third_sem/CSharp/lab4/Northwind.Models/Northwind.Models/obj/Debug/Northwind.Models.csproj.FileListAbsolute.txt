@@ -1,0 +1,5 @@
+D:\Programming\Labs\third_sem\CSharp\lab4\Northwind.Models\Northwind.Models\bin\Debug\Northwind.Models.dll
+D:\Programming\Labs\third_sem\CSharp\lab4\Northwind.Models\Northwind.Models\bin\Debug\Northwind.Models.pdb
+D:\Programming\Labs\third_sem\CSharp\lab4\Northwind.Models\Northwind.Models\obj\Debug\Northwind.Models.csproj.CoreCompileInputs.cache
+D:\Programming\Labs\third_sem\CSharp\lab4\Northwind.Models\Northwind.Models\obj\Debug\Northwind.Models.dll
+D:\Programming\Labs\third_sem\CSharp\lab4\Northwind.Models\Northwind.Models\obj\Debug\Northwind.Models.pdb

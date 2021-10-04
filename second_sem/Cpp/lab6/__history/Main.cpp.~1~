@@ -1,0 +1,30 @@
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Main.h"
+#include "Tree.h"
+#include <string>
+
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm1 *Form1;
+Tree<String>* tree = new Tree<String>();
+TTreeNode *Root;
+
+
+__fastcall TForm1::TForm1(TComponent* Owner)
+	: TForm(Owner)
+{
+
+}
+void __fastcall TForm1::Button1Click(TObject *Sender)
+{
+	int array[5] = { 1,9,4,7,2 };
+
+	tree->Add_array_info(array,5);
+
+
+	int n  = TreeView1->Selected->AbsoluteIndex;
+	TTreeNode *Node1 = TreeView1->Items->Item[n];
+	TreeView1->Items->AddChild(Node1,"ChildNode");
+}

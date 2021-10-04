@@ -1,0 +1,40 @@
+<!DOCTYPE AFC>
+<algorithm>
+  <branch>
+    <process text="int ln" />
+    <process text="int** M" />
+    <process text="alloc memory M" />
+    <process text="Input M" />
+    <assign dest="m" src="0" />
+    <pre cond="m &lt; ln" >
+      <branch>
+        <assign dest="n" src="0" />
+        <pre cond="n &lt; ln" >
+          <branch>
+            <if cond="M[i][k] &lt; diag " >
+              <branch>
+                <if cond="M[m][n] > max" >
+                  <branch>
+                    <process text="max = M[m][n];" />
+                  </branch>
+                  <branch/>
+                </if>
+                <if cond="M[m][n] &lt; min" >
+                  <branch>
+                    <process text="min = M[m][n];" />
+                  </branch>
+                  <branch/>
+                </if>
+              </branch>
+              <branch/>
+            </if>
+            <assign dest="n" src="n + 1" />
+          </branch>
+        </pre>
+        <assign dest="m" src="m + 1" />
+      </branch>
+    </pre>
+    <process text="Output M" />
+    <process text="Output max, min" />
+  </branch>
+</algorithm>

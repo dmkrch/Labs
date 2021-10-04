@@ -1,0 +1,24 @@
+D:\Prog\lab_2_sem\ИСП  (C#)\lab2_10\lab2_10\bin\Debug\netcoreapp3.1\lab2_10.exe
+D:\Prog\lab_2_sem\ИСП  (C#)\lab2_10\lab2_10\bin\Debug\netcoreapp3.1\lab2_10.deps.json
+D:\Prog\lab_2_sem\ИСП  (C#)\lab2_10\lab2_10\bin\Debug\netcoreapp3.1\lab2_10.runtimeconfig.json
+D:\Prog\lab_2_sem\ИСП  (C#)\lab2_10\lab2_10\bin\Debug\netcoreapp3.1\lab2_10.runtimeconfig.dev.json
+D:\Prog\lab_2_sem\ИСП  (C#)\lab2_10\lab2_10\bin\Debug\netcoreapp3.1\lab2_10.dll
+D:\Prog\lab_2_sem\ИСП  (C#)\lab2_10\lab2_10\bin\Debug\netcoreapp3.1\lab2_10.pdb
+D:\Prog\lab_2_sem\ИСП  (C#)\lab2_10\lab2_10\obj\Debug\netcoreapp3.1\lab2_10.csprojAssemblyReference.cache
+D:\Prog\lab_2_sem\ИСП  (C#)\lab2_10\lab2_10\obj\Debug\netcoreapp3.1\lab2_10.AssemblyInfoInputs.cache
+D:\Prog\lab_2_sem\ИСП  (C#)\lab2_10\lab2_10\obj\Debug\netcoreapp3.1\lab2_10.AssemblyInfo.cs
+D:\Prog\lab_2_sem\ИСП  (C#)\lab2_10\lab2_10\obj\Debug\netcoreapp3.1\lab2_10.dll
+D:\Prog\lab_2_sem\ИСП  (C#)\lab2_10\lab2_10\obj\Debug\netcoreapp3.1\lab2_10.pdb
+D:\Git\Labs\second_sem\CSharp\lab2_10\lab2_10\bin\Debug\netcoreapp3.1\lab2_10.exe
+D:\Git\Labs\second_sem\CSharp\lab2_10\lab2_10\bin\Debug\netcoreapp3.1\lab2_10.deps.json
+D:\Git\Labs\second_sem\CSharp\lab2_10\lab2_10\bin\Debug\netcoreapp3.1\lab2_10.runtimeconfig.json
+D:\Git\Labs\second_sem\CSharp\lab2_10\lab2_10\bin\Debug\netcoreapp3.1\lab2_10.runtimeconfig.dev.json
+D:\Git\Labs\second_sem\CSharp\lab2_10\lab2_10\bin\Debug\netcoreapp3.1\lab2_10.dll
+D:\Git\Labs\second_sem\CSharp\lab2_10\lab2_10\bin\Debug\netcoreapp3.1\lab2_10.pdb
+D:\Git\Labs\second_sem\CSharp\lab2_10\lab2_10\obj\Debug\netcoreapp3.1\lab2_10.csprojAssemblyReference.cache
+D:\Git\Labs\second_sem\CSharp\lab2_10\lab2_10\obj\Debug\netcoreapp3.1\lab2_10.AssemblyInfoInputs.cache
+D:\Git\Labs\second_sem\CSharp\lab2_10\lab2_10\obj\Debug\netcoreapp3.1\lab2_10.AssemblyInfo.cs
+D:\Git\Labs\second_sem\CSharp\lab2_10\lab2_10\obj\Debug\netcoreapp3.1\lab2_10.csproj.CoreCompileInputs.cache
+D:\Git\Labs\second_sem\CSharp\lab2_10\lab2_10\obj\Debug\netcoreapp3.1\lab2_10.dll
+D:\Git\Labs\second_sem\CSharp\lab2_10\lab2_10\obj\Debug\netcoreapp3.1\lab2_10.pdb
+D:\Git\Labs\second_sem\CSharp\lab2_10\lab2_10\obj\Debug\netcoreapp3.1\lab2_10.genruntimeconfig.cache

@@ -1,0 +1,19 @@
+#ifndef OrderH
+#define OrderH
+
+#include <vector>
+#include "Dish.h"
+
+#endif
+
+class Order
+{
+	public:
+
+
+
+	private:
+		int _index;
+		int _tableIndex;
+		std::vector <Dish> _dish;
+};

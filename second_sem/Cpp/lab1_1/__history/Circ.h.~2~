@@ -1,0 +1,51 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#ifndef CircH
+#define CircH
+#pragma once
+//---------------------------------------------------------------------------
+#endif
+
+extern int acc;
+
+class Circ
+{
+
+public:
+	Circ ()
+	{
+
+	}
+
+	Circ(int x, int y, int r)
+	{
+		_x = x;
+		_y = y;
+		_r = r;
+	}
+
+	void show(TCanvas *Canvas)
+	{
+		Canvas->Pen->Color=clYellow;
+		Canvas->Brush->Color=clYellow;
+		Canvas->Ellipse(_x - _r, _y + _r, _x + _r, _y - _r);
+	}
+
+	void move(TCanvas *Canvas)
+	{
+		_x = _x - acc;
+	}
+
+	void hide(TCanvas *Canvas)
+	{
+		Canvas->Pen->Color = clWhite;
+		Canvas->Brush->Color = clWhite;
+		Canvas->Ellipse(_x - _r, _y + _r, _x + _r, _y - _r);
+	}
+
+private:
+	int _x;
+	int _y;
+	int _r;
+}

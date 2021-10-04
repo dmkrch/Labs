@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<FileManagerOptions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <PathsOptions>
+    <SourceDirectory>D:\Programming\Labs\third_sem\CSharp\lab3\SourceDirectory</SourceDirectory>
+    <TargetDirectory>D:\Programming\Labs\third_sem\CSharp\lab3\TargetDirectory</TargetDirectory>
+  </PathsOptions>
+  <EncryptingOptions>
+    <Key>b14ca5898a4e4133bbce2ea2315a1916</Key>
+  </EncryptingOptions>
+  <CompressOptions>
+    <CompressFormat>.gz</CompressFormat>
+  </CompressOptions>
+</FileManagerOptions>

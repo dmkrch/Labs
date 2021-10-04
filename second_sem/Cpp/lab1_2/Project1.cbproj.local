@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.113,D:\Prog\lab_2_sem\C++\Radiogroup\Unit1.h=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.531,D:\Prog\lab_2_sem\C++\Radiogroup\Main.dfm=D:\Prog\lab_2_sem\C++\Radiogroup\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.093,=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.242,=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.793,D:\Prog\lab_2_sem\C++\Radiogroup\Unit1.h=D:\Prog\lab_2_sem\C++\Radiogroup\Parallelogram.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.581,D:\Prog\lab_2_sem\C++\Radiogroup\Ellipse.h=D:\Prog\lab_2_sem\C++\Radiogroup\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.909,D:\Prog\lab_2_sem\C++\Radiogroup\Ellipse.h=D:\Prog\lab_2_sem\C++\Radiogroup\Ellipsee.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.807,D:\Prog\lab_2_sem\C++\Radiogroup\Unit1.h=D:\Prog\lab_2_sem\C++\Radiogroup\Rectanglee.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.783,D:\Prog\lab_2_sem\C++\Radiogroup\Unit1.h=D:\Prog\lab_2_sem\C++\Radiogroup\Trapezium.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.918,D:\Prog\lab_2_sem\C++\Radiogroup\Project1PCH1.h=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.581,D:\Prog\lab_2_sem\C++\Radiogroup\Ellipse.cpp=D:\Prog\lab_2_sem\C++\Radiogroup\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.463,D:\Prog\lab_2_sem\C++\Radiogroup\Trianglee.cpp=D:\Prog\lab_2_sem\C++\Radiogroup\Triangle.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.113,D:\Prog\lab_2_sem\C++\Radiogroup\Unit1.dfm=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.685,D:\Prog\lab_2_sem\C++\Radiogroup\Figure.cpp=D:\Prog\lab_2_sem\C++\Radiogroup\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.909,D:\Prog\lab_2_sem\C++\Radiogroup\Ellipse.cpp=D:\Prog\lab_2_sem\C++\Radiogroup\Ellipsee.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.158,=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.606,=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.669,D:\Prog\lab_2_sem\C++\Radiogroup\Cirk.cpp=D:\Prog\lab_2_sem\C++\Radiogroup\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.463,D:\Prog\lab_2_sem\C++\Radiogroup\Trianglee.h=D:\Prog\lab_2_sem\C++\Radiogroup\Triangle.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.113,D:\Prog\lab_2_sem\C++\Radiogroup\Unit1.cpp=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.581,=D:\Prog\lab_2_sem\C++\Radiogroup\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.793,D:\Prog\lab_2_sem\C++\Radiogroup\Unit1.cpp=D:\Prog\lab_2_sem\C++\Radiogroup\Parallelogram.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.282,=D:\Prog\lab_2_sem\C++\Radiogroup\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.807,D:\Prog\lab_2_sem\C++\Radiogroup\Unit1.cpp=D:\Prog\lab_2_sem\C++\Radiogroup\Rectanglee.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.015,D:\Prog\lab_2_sem\C++\Radiogroup\Triangle.cpp=D:\Prog\lab_2_sem\C++\Radiogroup\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.669,D:\Prog\lab_2_sem\C++\Radiogroup\Cirk.h=D:\Prog\lab_2_sem\C++\Radiogroup\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.015,D:\Prog\lab_2_sem\C++\Radiogroup\Triangle.h=D:\Prog\lab_2_sem\C++\Radiogroup\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.783,D:\Prog\lab_2_sem\C++\Radiogroup\Unit1.cpp=D:\Prog\lab_2_sem\C++\Radiogroup\Trapezium.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.770,=D:\Prog\lab_2_sem\C++\Radiogroup\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.531,D:\Prog\lab_2_sem\C++\Radiogroup\Main.cpp=D:\Prog\lab_2_sem\C++\Radiogroup\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.726,D:\Prog\lab_2_sem\C++\Radiogroup\Project1.cbproj=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Project1.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.685,D:\Prog\lab_2_sem\C++\Radiogroup\Figure.h=D:\Prog\lab_2_sem\C++\Radiogroup\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.531,D:\Prog\lab_2_sem\C++\Radiogroup\Main.h=D:\Prog\lab_2_sem\C++\Radiogroup\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.887,=D:\Prog\lab_2_sem\C++\Radiogroup\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.658,=D:\Prog\lab_2_sem\C++\Radiogroup\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.067,=D:\Prog\lab_2_sem\C++\Radiogroup\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.959,=D:\Prog\lab_2_sem\C++\Radiogroup\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.049,=D:\Prog\lab_2_sem\C++\Radiogroup\Unit1.cpp</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Cirk.cpp"/>
+    <File Path="Cirk.cpp"/>
+    <File Path="Cirk.h"/>
+    <File Path="Ellipsee.cpp"/>
+    <File Path="Ellipsee.cpp"/>
+    <File Path="Ellipsee.h"/>
+    <File Path="Main.cpp"/>
+    <File Path="Main.cpp"/>
+    <File Path="Main.dfm"/>
+    <File Path="Main.h"/>
+    <File Path="Figure.cpp"/>
+    <File Path="Figure.cpp"/>
+    <File Path="Figure.h"/>
+    <File Path="Parallelogram.cpp"/>
+    <File Path="Parallelogram.cpp"/>
+    <File Path="Parallelogram.h"/>
+    <File Path="Project1PCH1.h"/>
+    <File Path="Project1.cpp"/>
+    <File Path="Rectanglee.cpp"/>
+    <File Path="Rectanglee.cpp"/>
+    <File Path="Rectanglee.h"/>
+    <File Path="Trapezium.cpp"/>
+    <File Path="Trapezium.cpp"/>
+    <File Path="Trapezium.h"/>
+    <File Path="Trianglee.cpp"/>
+    <File Path="Trianglee.cpp"/>
+    <File Path="Trianglee.h"/>
+  </ProjectSortOrder>
+</BorlandProject>

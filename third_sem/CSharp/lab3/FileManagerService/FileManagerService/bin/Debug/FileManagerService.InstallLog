@@ -1,0 +1,21 @@
+﻿Выполняется установка сборки 'D:\Programming\Labs\third_sem\CSharp\lab3\FileManagerService\FileManagerService\bin\Debug\FileManagerService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\Programming\Labs\third_sem\CSharp\lab3\FileManagerService\FileManagerService\bin\Debug\FileManagerService.InstallLog
+   assemblypath = D:\Programming\Labs\third_sem\CSharp\lab3\FileManagerService\FileManagerService\bin\Debug\FileManagerService.exe
+Устанавливается служба FileManagerService...
+Служба FileManagerService успешно установлена.
+Создается исходный EventLog FileManagerService в журнале Application...
+Выполняется фиксация сборки 'D:\Programming\Labs\third_sem\CSharp\lab3\FileManagerService\FileManagerService\bin\Debug\FileManagerService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\Programming\Labs\third_sem\CSharp\lab3\FileManagerService\FileManagerService\bin\Debug\FileManagerService.InstallLog
+   assemblypath = D:\Programming\Labs\third_sem\CSharp\lab3\FileManagerService\FileManagerService\bin\Debug\FileManagerService.exe
+Выполняется удаление сборки 'D:\Programming\Labs\third_sem\CSharp\lab3\FileManagerService\FileManagerService\bin\Debug\FileManagerService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\Programming\Labs\third_sem\CSharp\lab3\FileManagerService\FileManagerService\bin\Debug\FileManagerService.InstallLog
+   assemblypath = D:\Programming\Labs\third_sem\CSharp\lab3\FileManagerService\FileManagerService\bin\Debug\FileManagerService.exe
+Выполняется удаление источника EventLog FileManagerService.
+Выполняется удаление службы FileManagerService из системы...
+Служба FileManagerService успешно удалена из системы.

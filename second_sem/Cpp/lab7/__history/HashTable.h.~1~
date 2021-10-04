@@ -1,0 +1,30 @@
+//---------------------------------------------------------------------------
+
+#ifndef HashTableH
+#define HashTableH
+//---------------------------------------------------------------------------
+#endif
+
+#include "Stack.h"
+#include <vcl.h>
+
+
+class HashTable
+{
+	public:
+		HashTable()
+		{
+		   /*	for(int i = 0; i < 10; ++i)
+			{
+				(hash_table + i) =  NULL;
+			}     */
+		}
+
+		Add_element(Node *element)
+		{
+
+		}
+
+	private:
+		Stack<String> hash_table[10];
+};

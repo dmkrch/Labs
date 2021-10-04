@@ -1,0 +1,33 @@
+C:\Users\A S U S\Desktop\SharpApp\SharpApp\bin\Debug\netcoreapp3.1\SharpApp.exe
+C:\Users\A S U S\Desktop\SharpApp\SharpApp\bin\Debug\netcoreapp3.1\SharpApp.deps.json
+C:\Users\A S U S\Desktop\SharpApp\SharpApp\bin\Debug\netcoreapp3.1\SharpApp.runtimeconfig.json
+C:\Users\A S U S\Desktop\SharpApp\SharpApp\bin\Debug\netcoreapp3.1\SharpApp.runtimeconfig.dev.json
+C:\Users\A S U S\Desktop\SharpApp\SharpApp\bin\Debug\netcoreapp3.1\SharpApp.dll
+C:\Users\A S U S\Desktop\SharpApp\SharpApp\bin\Debug\netcoreapp3.1\SharpApp.pdb
+C:\Users\A S U S\Desktop\SharpApp\SharpApp\obj\Debug\netcoreapp3.1\SharpApp.csprojAssemblyReference.cache
+C:\Users\A S U S\Desktop\SharpApp\SharpApp\obj\Debug\netcoreapp3.1\SharpApp.AssemblyInfoInputs.cache
+C:\Users\A S U S\Desktop\SharpApp\SharpApp\obj\Debug\netcoreapp3.1\SharpApp.AssemblyInfo.cs
+C:\Users\A S U S\Desktop\SharpApp\SharpApp\obj\Debug\netcoreapp3.1\SharpApp.dll
+C:\Users\A S U S\Desktop\SharpApp\SharpApp\obj\Debug\netcoreapp3.1\SharpApp.pdb
+D:\SharpApp\SharpApp\bin\Debug\netcoreapp3.1\SharpApp.exe
+D:\SharpApp\SharpApp\bin\Debug\netcoreapp3.1\SharpApp.deps.json
+D:\SharpApp\SharpApp\bin\Debug\netcoreapp3.1\SharpApp.runtimeconfig.json
+D:\SharpApp\SharpApp\bin\Debug\netcoreapp3.1\SharpApp.runtimeconfig.dev.json
+D:\SharpApp\SharpApp\bin\Debug\netcoreapp3.1\SharpApp.dll
+D:\SharpApp\SharpApp\bin\Debug\netcoreapp3.1\SharpApp.pdb
+D:\SharpApp\SharpApp\obj\Debug\netcoreapp3.1\SharpApp.csprojAssemblyReference.cache
+D:\SharpApp\SharpApp\obj\Debug\netcoreapp3.1\SharpApp.AssemblyInfoInputs.cache
+D:\SharpApp\SharpApp\obj\Debug\netcoreapp3.1\SharpApp.AssemblyInfo.cs
+D:\SharpApp\SharpApp\obj\Debug\netcoreapp3.1\SharpApp.dll
+D:\SharpApp\SharpApp\obj\Debug\netcoreapp3.1\SharpApp.pdb
+D:\Prog\lab_2_sem\ИСП  (C#)\lab4_2\SharpApp\SharpApp\bin\Debug\netcoreapp3.1\SharpApp.exe
+D:\Prog\lab_2_sem\ИСП  (C#)\lab4_2\SharpApp\SharpApp\bin\Debug\netcoreapp3.1\SharpApp.deps.json
+D:\Prog\lab_2_sem\ИСП  (C#)\lab4_2\SharpApp\SharpApp\bin\Debug\netcoreapp3.1\SharpApp.runtimeconfig.json
+D:\Prog\lab_2_sem\ИСП  (C#)\lab4_2\SharpApp\SharpApp\bin\Debug\netcoreapp3.1\SharpApp.runtimeconfig.dev.json
+D:\Prog\lab_2_sem\ИСП  (C#)\lab4_2\SharpApp\SharpApp\bin\Debug\netcoreapp3.1\SharpApp.dll
+D:\Prog\lab_2_sem\ИСП  (C#)\lab4_2\SharpApp\SharpApp\bin\Debug\netcoreapp3.1\SharpApp.pdb
+D:\Prog\lab_2_sem\ИСП  (C#)\lab4_2\SharpApp\SharpApp\obj\Debug\netcoreapp3.1\SharpApp.csprojAssemblyReference.cache
+D:\Prog\lab_2_sem\ИСП  (C#)\lab4_2\SharpApp\SharpApp\obj\Debug\netcoreapp3.1\SharpApp.AssemblyInfoInputs.cache
+D:\Prog\lab_2_sem\ИСП  (C#)\lab4_2\SharpApp\SharpApp\obj\Debug\netcoreapp3.1\SharpApp.AssemblyInfo.cs
+D:\Prog\lab_2_sem\ИСП  (C#)\lab4_2\SharpApp\SharpApp\obj\Debug\netcoreapp3.1\SharpApp.dll
+D:\Prog\lab_2_sem\ИСП  (C#)\lab4_2\SharpApp\SharpApp\obj\Debug\netcoreapp3.1\SharpApp.pdb

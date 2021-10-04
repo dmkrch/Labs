@@ -1,0 +1,24 @@
+-------------
+Vasya Pupkin
+Yakuba Kolasa, 10
+20.01.2000
+-------------
+Victor Kaktusov
+Gikalo, 9
+01.01.1980
+-------------
+Misha Kapustin
+Pobedi, 25
+05.02.2001
+-------------
+Max Edinica
+Gorkogo, 50
+01.07.1998
+-------------
+Alesha Popovich
+Lenina, 106
+27.08.1996
+eof
+
+
+

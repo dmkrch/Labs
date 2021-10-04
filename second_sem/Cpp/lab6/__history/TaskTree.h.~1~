@@ -1,0 +1,12 @@
+#ifndef TaskTreeH
+#define TaskTreeH
+
+#endif
+#include "Tree.h"
+#include <vcl.h>
+
+template <typename T>
+class TaskTree : Tree<T>
+{
+
+}

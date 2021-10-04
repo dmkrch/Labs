@@ -1,0 +1,67 @@
+#ifndef CirkH
+#define CirkH
+
+#include "Figure.h"
+#include <vcl.h>
+#include <math.h>
+
+
+#endif
+
+class Cirk : public Figure
+{
+	public:
+		Cirk()
+		{
+
+		}
+
+		void set_center_x_coord(int coord)
+		{
+			center_x_coord = coord;
+		}
+
+		void set_center_y_coord(int coord)
+		{
+			center_y_coord = coord;
+		}
+
+		void set_second_x_coord(int coord)
+		{
+			second_x_coord = coord;
+		}
+
+		void set_second_y_coord(int coord)
+		{
+			second_y_coord = coord;
+		}
+
+		void set_radius()
+		{
+			radius = abs(second_x_coord - center_x_coord);
+		}
+
+		void hide(TCanvas *Canvas, TImage *Image1)
+		{
+
+		}
+
+		void move(TCanvas *Canvas, TImage *Image1)
+		{
+
+		}
+
+		void show(TCanvas *Canvas, TImage *Image1)
+		{
+			Image1->Canvas->Pen->Color=clBlack;
+			Image1->Canvas->Brush->Color=clGray;
+			Image1->Canvas->Ellipse(center_x_coord - radius, center_y_coord - radius, center_x_coord + radius, center_y_coord + radius);
+		}
+
+	private:
+		int center_x_coord;
+		int center_y_coord;
+		int second_x_coord;
+		int second_y_coord;
+		int radius;
+};

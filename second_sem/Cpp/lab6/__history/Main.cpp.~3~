@@ -1,0 +1,29 @@
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Main.h"
+#include "TaskTree.h"
+#include <string>
+
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+
+
+TForm1 *Form1;
+TaskTree<String> *tree = new TaskTree<String>;
+TTreeNode *Root;
+
+
+__fastcall TForm1::TForm1(TComponent* Owner)
+	: TForm(Owner)
+{
+	tree->Insert(24, "Alex");
+	tree->Insert(2, "Max");
+	tree->Insert(25, "Jack");
+	tree->Insert(15, "George");
+	tree->Insert(7, "John");
+	tree->Insert(3, "Pavel");
+	tree->Insert(9, "Dmitriy");
+	tree->Insert(5, "Den");
+
+}

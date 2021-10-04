@@ -1,0 +1,31 @@
+5
+George
+27
+5
+II middle
+Docent
+--------------------
+Michael
+35
+10
+I middle
+Docent
+--------------------
+Alfred
+48
+25
+I highest
+Proffesor
+---------------------
+Smith
+55
+33
+I highest
+Proffesor
+---------------------
+Miller 
+24
+2
+III lowest
+Candidate of Science
+---------------------

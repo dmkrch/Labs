@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.890,D:\Prog\lab_2_sem\C++\lab6\TaskTree.cpp=D:\Prog\lab_2_sem\C++\lab6\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.553,D:\Prog\lab_2_sem\C++\lab6\TaskTree.cpp=D:\Prog\lab_2_sem\C++\lab6\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.676,=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.681,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.cpp=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Main.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.722,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.cpp=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Tree.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.539,D:\Prog\lab_2_sem\C++\lab6\TaskTree.cpp=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.268,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Main.cpp=D:\Prog\lab_2_sem\C++\lab6\Main.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.796,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Tree.cpp=D:\Prog\lab_2_sem\C++\lab6\Tree.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.681,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Main.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.606,=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.233,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Project1PCH1.h=D:\Prog\lab_2_sem\C++\lab6\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.691,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Project1.cbproj=D:\Prog\lab_2_sem\C++\lab6\Project1.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.681,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.h=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Main.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.890,D:\Prog\lab_2_sem\C++\lab6\TaskTree.h=D:\Prog\lab_2_sem\C++\lab6\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.553,D:\Prog\lab_2_sem\C++\lab6\TaskTree.h=D:\Prog\lab_2_sem\C++\lab6\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.268,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Main.h=D:\Prog\lab_2_sem\C++\lab6\Main.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.268,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Main.dfm=D:\Prog\lab_2_sem\C++\lab6\Main.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.722,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.h=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Tree.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.532,=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.093,=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.931,=C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.189,=D:\Prog\lab_2_sem\C++\lab6\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.401,=D:\Prog\lab_2_sem\C++\lab6\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.796,C:\Users\A S U S\Documents\Embarcadero\Studio\Projects\Tree.h=D:\Prog\lab_2_sem\C++\lab6\Tree.h</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Main.cpp"/>
+    <File Path="Main.cpp"/>
+    <File Path="Main.dfm"/>
+    <File Path="Main.h"/>
+    <File Path="Project1.cpp"/>
+    <File Path="Project1PCH1.h"/>
+    <File Path="TaskTree.cpp"/>
+    <File Path="TaskTree.cpp"/>
+    <File Path="TaskTree.h"/>
+    <File Path="Tree.cpp"/>
+    <File Path="Tree.cpp"/>
+    <File Path="Tree.h"/>
+  </ProjectSortOrder>
+</BorlandProject>

@@ -1,0 +1,39 @@
+#ifndef MenuH
+#define MenuH
+
+#include <vector>
+#include <string>
+#include "Dish.h"
+
+#endif
+
+
+class Menu
+{
+	public:
+		void InitInfo()
+		{
+			counter = 0;
+
+			TStringList *List = new TStringList;
+			AnsiString SFile = "MenuInput.txt";
+			List->LoadFromFile(SFile);
+
+			AnsiString title = List -> Strings[counter++];
+			AnsiString description = List -> Strings[counter++];
+			int price = (List -> Strings[counter++]).ToInt();
+			++counter;
+
+
+			Dish dish(title, description, price);
+			_menu.push_back(dish);
+
+		}
+
+
+
+	private:
+		static int counter;
+		std::vector <Dish> _menu;
+
+};

@@ -1,0 +1,58 @@
+#ifndef TreeH
+#define TreeH
+
+#endif
+
+#include <vcl.h>
+
+
+template <typename T>
+class Node
+{
+public:
+	Node(int value, T data)
+	{
+		this->value = value;
+		this->data = data;
+
+		right = NULL;
+		left = NULL;
+	}
+
+	T data;
+	int value;
+	Node* left;
+	Node* right;
+};
+
+
+
+template <typename T>
+class Tree
+{
+public:
+	Tree() { root = NULL; }
+	~Tree() { Destroy_tree(); }
+
+	void Delete_node(int key);
+	void Show(int key);
+	void Destroy_tree();
+	void Insert(int key, T data = T());
+	void Inorder_print();
+	void Postorder_print();
+	void Preorder_print();
+	void Add_array_info(int array[], int length);
+	Node<T>* Search(int key);
+
+private:
+	Node<T>* Delete_node(Node<T>* temp, int key);
+	void Destroy_tree(Node<T>* leaf);
+	void Insert(int key, T data, Node<T>* leaf);
+	void Inorder_print(Node<T>* leaf);
+	void Postorder_print(Node<T>* leaf);
+	void Preorder_print(Node<T>* leaf);
+	Node<T>* Search(int key, Node<T>* leaf);
+
+
+	Node<T>* root;
+};
