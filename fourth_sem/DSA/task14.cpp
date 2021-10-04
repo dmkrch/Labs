@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 
+using namespace std;
+
 // defining vector of long numbers vectors
 #define MATRIX vector<vector<long long>>
 

@@ -17,5 +17,7 @@ from django.contrib import admin
 from django.urls import path
 
 urlpatterns = [
+    path('', redirect_blog),
     path('admin/', admin.site.urls),
+    path('blog/', include('blog.urls'))
 ]
