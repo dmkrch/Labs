@@ -2,3 +2,6 @@ first_sem
 second_sem
 third_sem
 fourth_sem
+
+*.*
+!*.cpp
