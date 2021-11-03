@@ -28,7 +28,7 @@ namespace WEB_953504_KARPOVICH.Controllers
         public ActionResult Index()
         {
             ViewData["Lst"] = new SelectList(_listDemo, "ListItemValue", "ListItemText");
-            ViewData["Text"] = "Лабораторная работа 2";
+            ViewData["Text"] = "Лабораторная работа 6";
             return View();
         }
 
