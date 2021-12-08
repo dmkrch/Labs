@@ -17,4 +17,3 @@ namespace WEB_953504_KARPOVICH.Data
         }
     }
 }
- 

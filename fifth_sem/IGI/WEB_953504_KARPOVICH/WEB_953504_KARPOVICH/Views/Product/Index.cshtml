@@ -3,11 +3,11 @@
     ViewData["Title"] = "Меню";
 
     var categories = ViewData["Brands"] as IEnumerable<Brand>;
-    int currentGroup = (int)ViewData["CurrentBrand"];
+    int currentBrand = (int)ViewData["CurrentBrand"];
 
-    var text = currentGroup != 0
+    var text = currentBrand != 0
     ? categories
-    .FirstOrDefault(g => g.BrandId == currentGroup)?
+    .FirstOrDefault(g => g.BrandId == currentBrand)?
     .BrandName
     : "Все";
 }
@@ -33,7 +33,7 @@
                     <a class="dropdown-item"
                        asp-action="Index"
                        asp-controller="Product"
-                       asp-route-group="@item.BrandId"
+                       asp-route-brand="@item.BrandId"
                        asp-route-pageNo="1">@item.BrandName</a>
                  }
             </div>
@@ -49,7 +49,7 @@
                page-total="@Model.TotalPages"
                action="Index"
                controller="Product"
-               group-id="@currentGroup"></pager>
+               group-id="@currentBrand"></pager>
 
     </div>
 </div>

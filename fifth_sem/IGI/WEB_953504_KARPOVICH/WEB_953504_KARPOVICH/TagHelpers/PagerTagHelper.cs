@@ -21,7 +21,7 @@ namespace WEB_953504_KARPOVICH.TagHelpers
         public string Action { get; set; }
         // имя контроллера
         public string Controller { get; set; }
-        public int? GroupId { get; set; }
+        public int? BrandId { get; set; }
         public PagerTagHelper(LinkGenerator linkGenerator)
         {
             _linkGenerator = linkGenerator;
@@ -43,9 +43,9 @@ namespace WEB_953504_KARPOVICH.TagHelpers
                 new
                 {
                     pageNo = i,
-                    group = GroupId == 0
+                    group = BrandId == 0
                 ? null
-               : GroupId
+               : BrandId
                 });
                 // получение разметки одной кнопки пейджера
                 var item = GetPagerItem(
